@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 
 
@@ -17,24 +18,32 @@ namespace ChipSetApp
     public partial class Form1 : Form
     {
 
-      //  Visitor v;
+        Visitor v;
         DataHelper verify;
         public Form1()
         {
             InitializeComponent();
-           // v = new Visitor();
+            v = new Visitor();
             verify = new DataHelper();
-          //  v.Open();
+            v.Open();
+        }
+        private void UpdateForm()
+        {
+            tbEmail.Text = "";
+            tbFirstName.Text = "";
+            tbId.Text = "";
+            tbLastName.Text = "";
+            tbRFID.Text = "";
         }
       
         private void button1_Click(object sender, EventArgs e)
         {
            
-          //  tbRFID.Text = v.TagSerial;
+            tbRFID.Text = v.TagSerial;
 
 
             //Checks if all required fields contain the required information
-            if (tbEmail.Text!= ""&&tbFirstName.Text!= ""&&tbId.Text!= ""&&tbLastName.Text!= ""&&tbRFID.Text!= "")
+            if (tbEmail.Text!= ""&&tbFirstName.Text!= ""&&tbId.Text!= ""&&tbLastName.Text!= "")
             {
 
                 //Check the requirements
@@ -44,6 +53,7 @@ namespace ChipSetApp
                             //If user exists calls the giver Method,
                             //which thanks to the assign method forwards the RFID value to the database
                         verify.RFIDgiver(Convert.ToInt32(tbId.Text), tbFirstName.Text, tbLastName.Text, tbEmail.Text, tbRFID.Text);
+                        v.Close();
                     }
                     else MessageBox.Show("No User Found");
                     }
@@ -52,6 +62,46 @@ namespace ChipSetApp
                 MessageBox.Show("Fill All Fields!");
             }
             
+        }
+
+        private void tbFirstName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar) || Char.IsPunctuation(e.KeyChar) || Char.IsSymbol(e.KeyChar) || Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+                SystemSounds.Beep.Play();
+
+            }
+        }
+
+        private void tbLastName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar) || Char.IsPunctuation(e.KeyChar) || Char.IsSymbol(e.KeyChar) || Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+                SystemSounds.Beep.Play();
+
+            }
+        }
+
+        private void tbEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar) || Char.IsPunctuation(e.KeyChar) || Char.IsSymbol(e.KeyChar) || Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+                SystemSounds.Beep.Play();
+
+            }
+        }
+
+        private void tbId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar) || Char.IsPunctuation(e.KeyChar) || Char.IsSymbol(e.KeyChar) || Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+                SystemSounds.Beep.Play();
+
+            }
         }
 
     }

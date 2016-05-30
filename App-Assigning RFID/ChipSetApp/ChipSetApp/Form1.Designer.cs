@@ -45,33 +45,36 @@
             // tbFirstName
             // 
             this.tbFirstName.BackColor = System.Drawing.SystemColors.Window;
-            this.tbFirstName.Location = new System.Drawing.Point(73, 12);
+            this.tbFirstName.Location = new System.Drawing.Point(116, 16);
             this.tbFirstName.Name = "tbFirstName";
-            this.tbFirstName.Size = new System.Drawing.Size(100, 20);
+            this.tbFirstName.Size = new System.Drawing.Size(124, 20);
             this.tbFirstName.TabIndex = 0;
+            this.tbFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFirstName_KeyPress);
             // 
             // tbLastName
             // 
-            this.tbLastName.Location = new System.Drawing.Point(73, 38);
+            this.tbLastName.Location = new System.Drawing.Point(116, 44);
             this.tbLastName.Name = "tbLastName";
-            this.tbLastName.Size = new System.Drawing.Size(100, 20);
+            this.tbLastName.Size = new System.Drawing.Size(124, 20);
             this.tbLastName.TabIndex = 1;
+            this.tbLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbLastName_KeyPress);
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(73, 64);
+            this.tbEmail.Location = new System.Drawing.Point(116, 73);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(100, 20);
+            this.tbEmail.Size = new System.Drawing.Size(124, 20);
             this.tbEmail.TabIndex = 2;
+            this.tbEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbEmail_KeyPress);
             // 
             // labelFirstName
             // 
             this.labelFirstName.AutoSize = true;
             this.labelFirstName.BackColor = System.Drawing.SystemColors.GrayText;
-            this.labelFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.labelFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.labelFirstName.Location = new System.Drawing.Point(8, 16);
             this.labelFirstName.Name = "labelFirstName";
-            this.labelFirstName.Size = new System.Drawing.Size(60, 13);
+            this.labelFirstName.Size = new System.Drawing.Size(90, 20);
             this.labelFirstName.TabIndex = 5;
             this.labelFirstName.Text = "First Name:";
             // 
@@ -79,10 +82,10 @@
             // 
             this.labelLastname.AutoSize = true;
             this.labelLastname.BackColor = System.Drawing.SystemColors.GrayText;
-            this.labelLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.labelLastname.Location = new System.Drawing.Point(7, 42);
+            this.labelLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelLastname.Location = new System.Drawing.Point(7, 44);
             this.labelLastname.Name = "labelLastname";
-            this.labelLastname.Size = new System.Drawing.Size(61, 13);
+            this.labelLastname.Size = new System.Drawing.Size(90, 20);
             this.labelLastname.TabIndex = 6;
             this.labelLastname.Text = "Last Name:";
             // 
@@ -90,19 +93,20 @@
             // 
             this.labelMail.AutoSize = true;
             this.labelMail.BackColor = System.Drawing.SystemColors.GrayText;
-            this.labelMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.labelMail.Location = new System.Drawing.Point(27, 68);
+            this.labelMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelMail.Location = new System.Drawing.Point(36, 72);
             this.labelMail.Name = "labelMail";
-            this.labelMail.Size = new System.Drawing.Size(41, 13);
+            this.labelMail.Size = new System.Drawing.Size(61, 20);
             this.labelMail.TabIndex = 7;
             this.labelMail.Text = "E-mail: ";
             // 
             // btnCheck
             // 
             this.btnCheck.BackColor = System.Drawing.SystemColors.GrayText;
-            this.btnCheck.Location = new System.Drawing.Point(73, 126);
+            this.btnCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheck.Location = new System.Drawing.Point(116, 138);
             this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(100, 48);
+            this.btnCheck.Size = new System.Drawing.Size(124, 48);
             this.btnCheck.TabIndex = 9;
             this.btnCheck.Text = "Verify";
             this.btnCheck.UseVisualStyleBackColor = false;
@@ -112,19 +116,19 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.GrayText;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label2.Location = new System.Drawing.Point(27, 194);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Location = new System.Drawing.Point(45, 203);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(52, 20);
             this.label2.TabIndex = 11;
             this.label2.Text = "RFID:";
             // 
             // tbRFID
             // 
             this.tbRFID.Enabled = false;
-            this.tbRFID.Location = new System.Drawing.Point(73, 190);
+            this.tbRFID.Location = new System.Drawing.Point(116, 203);
             this.tbRFID.Name = "tbRFID";
-            this.tbRFID.Size = new System.Drawing.Size(100, 20);
+            this.tbRFID.Size = new System.Drawing.Size(124, 20);
             this.tbRFID.TabIndex = 10;
             this.tbRFID.Text = "works";
             // 
@@ -132,19 +136,20 @@
             // 
             this.lbId.AutoSize = true;
             this.lbId.BackColor = System.Drawing.SystemColors.GrayText;
-            this.lbId.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.lbId.Location = new System.Drawing.Point(47, 90);
+            this.lbId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbId.Location = new System.Drawing.Point(67, 101);
             this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(21, 13);
+            this.lbId.Size = new System.Drawing.Size(30, 20);
             this.lbId.TabIndex = 13;
             this.lbId.Text = "ID:";
             // 
             // tbId
             // 
-            this.tbId.Location = new System.Drawing.Point(73, 90);
+            this.tbId.Location = new System.Drawing.Point(116, 101);
             this.tbId.Name = "tbId";
-            this.tbId.Size = new System.Drawing.Size(100, 20);
+            this.tbId.Size = new System.Drawing.Size(124, 20);
             this.tbId.TabIndex = 12;
+            this.tbId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbId_KeyPress);
             // 
             // Form1
             // 
@@ -153,7 +158,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.DarkOrange;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(210, 233);
+            this.ClientSize = new System.Drawing.Size(268, 271);
             this.Controls.Add(this.lbId);
             this.Controls.Add(this.tbId);
             this.Controls.Add(this.label2);
@@ -168,7 +173,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Add-RFID";
+            this.Text = "July Morning";
             this.ResumeLayout(false);
             this.PerformLayout();
 

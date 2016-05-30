@@ -66,20 +66,19 @@ namespace ChipSetApp
         //A method whitch Assignes the RFID to the user which has the input ID
         private void assignMethod(string rfid,int idin)
         {
-            string query = "UPDATE `dbi339805`.`visitor` SET `RFID` = '" + rfid + "' WHERE `VisitorID` = '" + idin + "';";
+            string query = "UPDATE `dbi339805`.`visitor` SET `RFID` = '" + rfid + "', `Active` = 1 WHERE `VisitorID` = '" + idin + "';";
             MySqlCommand command = new MySqlCommand(query, connection);
             MySqlDataReader reader;
             try
             {
-                
+                connection.Open();
                 reader = command.ExecuteReader();
 
-
             }
-            catch
+            catch (Exception exc)
             {
 
-                MessageBox.Show("Unexpected error occured");
+                MessageBox.Show(exc.Message);
             }
 
             finally
@@ -96,7 +95,7 @@ namespace ChipSetApp
             MySqlCommand allUsers = new MySqlCommand(sql, connection);
           
             try
-	{	        
+	        {	        
 		     connection.Open();
              MySqlDataReader search = allUsers.ExecuteReader();
                 
@@ -112,33 +111,29 @@ namespace ChipSetApp
 
                     name=Convert.ToString(search[1]);
                     Lastname  = Convert.ToString(search[2]);
-                   email =Convert.ToString(search[5]);
+                    email =Convert.ToString(search[5]);
                     //Series of checks to find if the user exists
-                   if (Fname==name&&Lname==Lastname&&email==Email&&id==idin)
+                   if (Fname==name && Lname==Lastname && email==Email && id==idin)
                    {
                        search.Close();
+                       connection.Close();
                        assignMethod(RFID, idin);
-                      
-                       
-                       
+                       break;
+                         
                    }
-
-                  
                    
                 }
-	}
+	        }
 	
-           catch
+            catch(Exception exc)
             {
-                MessageBox.Show("Unexpected Error Occured...");
+                MessageBox.Show(exc.Message);
             }
             finally
             {
                 connection.Close();
             }
              
-            
-            
   
 
         }

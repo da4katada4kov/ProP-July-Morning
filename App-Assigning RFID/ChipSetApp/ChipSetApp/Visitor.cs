@@ -41,12 +41,12 @@ namespace ChipSetApp
             }
             
         }
-        public void Close(Form f)
+        public void Close(/*Form f*/)
         {
             myRFIDReader.LED = false;
             myRFIDReader.Antenna = false;
             myRFIDReader.close();
-            Form.ActiveForm.Close();
+            //Form.ActiveForm.Close();
            
         }
         public void SayHello(object sender, TagEventArgs e)
