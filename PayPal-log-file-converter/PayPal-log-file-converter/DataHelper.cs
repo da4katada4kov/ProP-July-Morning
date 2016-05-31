@@ -37,10 +37,7 @@ namespace PayPal_log_file_converter
             connection.Close();
             
         }
-        private void UpdateBalanceInVisitor(int visitorid)
-        {
-            String s = ""
-        }
+
         public void CloseConnection()
         {
             connection.Close();
