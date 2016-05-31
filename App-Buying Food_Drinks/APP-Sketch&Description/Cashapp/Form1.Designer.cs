@@ -64,9 +64,9 @@
             this.orderlist.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderlist.FormattingEnabled = true;
             this.orderlist.ItemHeight = 20;
-            this.orderlist.Location = new System.Drawing.Point(812, 12);
+            this.orderlist.Location = new System.Drawing.Point(812, 36);
             this.orderlist.Name = "orderlist";
-            this.orderlist.Size = new System.Drawing.Size(309, 484);
+            this.orderlist.Size = new System.Drawing.Size(309, 404);
             this.orderlist.TabIndex = 0;
             // 
             // btnCheckout
@@ -83,8 +83,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(567, 532);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(924, 452);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 38);
             this.label1.TabIndex = 2;
@@ -93,8 +95,10 @@
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
+            this.lblTotal.BackColor = System.Drawing.Color.Transparent;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(671, 532);
+            this.lblTotal.ForeColor = System.Drawing.Color.White;
+            this.lblTotal.Location = new System.Drawing.Point(1028, 452);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(64, 39);
             this.lblTotal.TabIndex = 3;
@@ -193,7 +197,7 @@
             // button11
             // 
             this.button11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button11.BackgroundImage")));
-            this.button11.Location = new System.Drawing.Point(12, 238);
+            this.button11.Location = new System.Drawing.Point(492, 351);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(154, 107);
             this.button11.TabIndex = 14;
@@ -244,9 +248,9 @@
             // 
             this.btnCalcMinus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnCalcMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcMinus.Location = new System.Drawing.Point(527, 397);
+            this.btnCalcMinus.Location = new System.Drawing.Point(812, 446);
             this.btnCalcMinus.Name = "btnCalcMinus";
-            this.btnCalcMinus.Size = new System.Drawing.Size(100, 100);
+            this.btnCalcMinus.Size = new System.Drawing.Size(50, 50);
             this.btnCalcMinus.TabIndex = 28;
             this.btnCalcMinus.Text = "-";
             this.btnCalcMinus.UseVisualStyleBackColor = false;
@@ -256,9 +260,9 @@
             // 
             this.btnCalcPlus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnCalcPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcPlus.Location = new System.Drawing.Point(678, 397);
+            this.btnCalcPlus.Location = new System.Drawing.Point(868, 446);
             this.btnCalcPlus.Name = "btnCalcPlus";
-            this.btnCalcPlus.Size = new System.Drawing.Size(100, 100);
+            this.btnCalcPlus.Size = new System.Drawing.Size(50, 50);
             this.btnCalcPlus.TabIndex = 30;
             this.btnCalcPlus.Text = "+";
             this.btnCalcPlus.UseVisualStyleBackColor = false;
@@ -337,7 +341,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(590, 366);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(812, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 13);
             this.label2.TabIndex = 37;
@@ -347,7 +353,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1133, 599);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1133, 587);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button21);
             this.Controls.Add(this.button20);
@@ -376,6 +383,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCheckout);
             this.Controls.Add(this.orderlist);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "CashApp";
             this.ResumeLayout(false);
