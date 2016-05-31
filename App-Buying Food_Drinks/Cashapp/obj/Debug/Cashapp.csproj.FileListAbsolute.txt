@@ -1,4 +1,3 @@
-<<<<<<< HEAD:App-Buying Food_Drinks/APP-Sketch&Description/Cashapp/obj/Debug/Cashapp.csproj.FileListAbsolute.txt
 D:\Files\Fontys\C#\S2Block 3\Cashapp\bin\Debug\Cashapp.exe.config
 D:\Files\Fontys\C#\S2Block 3\Cashapp\bin\Debug\Cashapp.exe
 D:\Files\Fontys\C#\S2Block 3\Cashapp\bin\Debug\Cashapp.pdb
@@ -46,43 +45,12 @@ D:\Files\Fontys\Project P\ProP-July-Morning\App-Buying Food_Drinks\APP-Sketch&De
 D:\Files\Fontys\Project P\ProP-July-Morning\App-Buying Food_Drinks\APP-Sketch&Description\Cashapp\obj\Debug\Cashapp.Form1.resources
 D:\Files\Fontys\Project P\ProP-July-Morning\App-Buying Food_Drinks\APP-Sketch&Description\Cashapp\obj\Debug\Cashapp.Properties.Resources.resources
 D:\Files\Fontys\Project P\ProP-July-Morning\App-Buying Food_Drinks\APP-Sketch&Description\Cashapp\obj\Debug\Cashapp.csproj.GenerateResource.Cache
-=======
-D:\Files\Fontys\C#\S2Block 3\Cashapp\bin\Debug\Cashapp.exe.config
-D:\Files\Fontys\C#\S2Block 3\Cashapp\bin\Debug\Cashapp.exe
-D:\Files\Fontys\C#\S2Block 3\Cashapp\bin\Debug\Cashapp.pdb
-D:\Files\Fontys\C#\S2Block 3\Cashapp\obj\Debug\Cashapp.csprojResolveAssemblyReference.cache
-D:\Files\Fontys\C#\S2Block 3\Cashapp\obj\Debug\Cashapp.Form1.resources
-D:\Files\Fontys\C#\S2Block 3\Cashapp\obj\Debug\Cashapp.Properties.Resources.resources
-D:\Files\Fontys\C#\S2Block 3\Cashapp\obj\Debug\Cashapp.csproj.GenerateResource.Cache
-D:\Files\Fontys\C#\S2Block 3\Cashapp\obj\Debug\Cashapp.exe
-D:\Files\Fontys\C#\S2Block 3\Cashapp\obj\Debug\Cashapp.pdb
-D:\ICT\block4\Cashapp\bin\Debug\Cashapp.exe.config
-D:\ICT\block4\Cashapp\obj\Debug\Cashapp.exe
-D:\ICT\block4\Cashapp\obj\Debug\Cashapp.pdb
-D:\ICT\block4\Cashapp\obj\Debug\Cashapp.csprojResolveAssemblyReference.cache
-D:\ICT\block4\Cashapp\obj\Debug\Cashapp.Form1.resources
-D:\ICT\block4\Cashapp\obj\Debug\Cashapp.Properties.Resources.resources
-D:\ICT\block4\Cashapp\obj\Debug\Cashapp.csproj.GenerateResource.Cache
-D:\ICT\block4\Cashapp\bin\Debug\Cashapp.exe
-D:\ICT\block4\Cashapp\bin\Debug\Cashapp.pdb
-D:\ICT\block4\Cashapp\bin\Debug\MySql.Data.dll
-D:\ICT\block4\prop\applicaton for shop\Cashapp\bin\Debug\Cashapp.exe.config
-D:\ICT\block4\prop\applicaton for shop\Cashapp\obj\Debug\Cashapp.exe
-D:\ICT\block4\prop\applicaton for shop\Cashapp\obj\Debug\Cashapp.pdb
-D:\ICT\block4\prop\applicaton for shop\Cashapp\bin\Debug\Cashapp.exe
-D:\ICT\block4\prop\applicaton for shop\Cashapp\bin\Debug\Cashapp.pdb
-D:\ICT\block4\prop\applicaton for shop\Cashapp\obj\Debug\Cashapp.csprojResolveAssemblyReference.cache
-D:\ICT\block4\prop\applicaton for shop\Cashapp\obj\Debug\Cashapp.Form1.resources
-D:\ICT\block4\prop\applicaton for shop\Cashapp\obj\Debug\Cashapp.Properties.Resources.resources
-D:\ICT\block4\prop\applicaton for shop\Cashapp\obj\Debug\Cashapp.csproj.GenerateResource.Cache
-D:\ICT\block4\prop\applicaton for shop\Cashapp\bin\Debug\Phidget21.NET.dll
-D:\ICT\block4\prop\Applications\applicaton for shop\Cashapp\bin\Debug\Cashapp.exe.config
-D:\ICT\block4\prop\Applications\applicaton for shop\Cashapp\obj\Debug\Cashapp.exe
-D:\ICT\block4\prop\Applications\applicaton for shop\Cashapp\obj\Debug\Cashapp.pdb
-D:\ICT\block4\prop\Applications\applicaton for shop\Cashapp\bin\Debug\Cashapp.exe
-D:\ICT\block4\prop\Applications\applicaton for shop\Cashapp\bin\Debug\Cashapp.pdb
-D:\ICT\block4\prop\Applications\applicaton for shop\Cashapp\obj\Debug\Cashapp.csprojResolveAssemblyReference.cache
-D:\ICT\block4\prop\Applications\applicaton for shop\Cashapp\obj\Debug\Cashapp.Form1.resources
-D:\ICT\block4\prop\Applications\applicaton for shop\Cashapp\obj\Debug\Cashapp.Properties.Resources.resources
-D:\ICT\block4\prop\Applications\applicaton for shop\Cashapp\obj\Debug\Cashapp.csproj.GenerateResource.Cache
->>>>>>> e945a0263512027e62d6423966e8e58f8371b71f:App-Buying Food_Drinks/Cashapp/obj/Debug/Cashapp.csproj.FileListAbsolute.txt
+C:\Users\Beco\Favorites\Desktop\Cashapp\bin\Debug\Cashapp.exe.config
+C:\Users\Beco\Favorites\Desktop\Cashapp\obj\Debug\Cashapp.exe
+C:\Users\Beco\Favorites\Desktop\Cashapp\obj\Debug\Cashapp.pdb
+C:\Users\Beco\Favorites\Desktop\Cashapp\bin\Debug\Cashapp.exe
+C:\Users\Beco\Favorites\Desktop\Cashapp\bin\Debug\Cashapp.pdb
+C:\Users\Beco\Favorites\Desktop\Cashapp\obj\Debug\Cashapp.csprojResolveAssemblyReference.cache
+C:\Users\Beco\Favorites\Desktop\Cashapp\obj\Debug\Cashapp.Form1.resources
+C:\Users\Beco\Favorites\Desktop\Cashapp\obj\Debug\Cashapp.Properties.Resources.resources
+C:\Users\Beco\Favorites\Desktop\Cashapp\obj\Debug\Cashapp.csproj.GenerateResource.Cache

@@ -1,4 +1,3 @@
-<<<<<<< HEAD:App-Lending Stuff/APP-Sketch&Description/RentApp/obj/Debug/Cashapp.csproj.FileListAbsolute.txt
 D:\Files\Fontys\C#\S2Block 3\Cashapp\bin\Debug\Cashapp.exe.config
 D:\Files\Fontys\C#\S2Block 3\Cashapp\bin\Debug\Cashapp.exe
 D:\Files\Fontys\C#\S2Block 3\Cashapp\bin\Debug\Cashapp.pdb
@@ -64,61 +63,3 @@ D:\Files\Fontys\Project P\ProP-July-Morning\App-Lending Stuff\APP-Sketch&Descrip
 D:\Files\Fontys\Project P\ProP-July-Morning\App-Lending Stuff\APP-Sketch&Description\RentApp\obj\Debug\Cashapp.Form1.resources
 D:\Files\Fontys\Project P\ProP-July-Morning\App-Lending Stuff\APP-Sketch&Description\RentApp\obj\Debug\Cashapp.Properties.Resources.resources
 D:\Files\Fontys\Project P\ProP-July-Morning\App-Lending Stuff\APP-Sketch&Description\RentApp\obj\Debug\Cashapp.csproj.GenerateResource.Cache
-=======
-D:\Files\Fontys\C#\S2Block 3\Cashapp\bin\Debug\Cashapp.exe.config
-D:\Files\Fontys\C#\S2Block 3\Cashapp\bin\Debug\Cashapp.exe
-D:\Files\Fontys\C#\S2Block 3\Cashapp\bin\Debug\Cashapp.pdb
-D:\Files\Fontys\C#\S2Block 3\Cashapp\obj\Debug\Cashapp.csprojResolveAssemblyReference.cache
-D:\Files\Fontys\C#\S2Block 3\Cashapp\obj\Debug\Cashapp.Form1.resources
-D:\Files\Fontys\C#\S2Block 3\Cashapp\obj\Debug\Cashapp.Properties.Resources.resources
-D:\Files\Fontys\C#\S2Block 3\Cashapp\obj\Debug\Cashapp.csproj.GenerateResource.Cache
-D:\Files\Fontys\C#\S2Block 3\Cashapp\obj\Debug\Cashapp.exe
-D:\Files\Fontys\C#\S2Block 3\Cashapp\obj\Debug\Cashapp.pdb
-D:\ICT\block4\Cashapp\bin\Debug\Cashapp.exe.config
-D:\ICT\block4\Cashapp\obj\Debug\Cashapp.exe
-D:\ICT\block4\Cashapp\obj\Debug\Cashapp.pdb
-D:\ICT\block4\Cashapp\obj\Debug\Cashapp.csprojResolveAssemblyReference.cache
-D:\ICT\block4\Cashapp\obj\Debug\Cashapp.Form1.resources
-D:\ICT\block4\Cashapp\obj\Debug\Cashapp.Properties.Resources.resources
-D:\ICT\block4\Cashapp\obj\Debug\Cashapp.csproj.GenerateResource.Cache
-D:\ICT\block4\Cashapp\bin\Debug\Cashapp.exe
-D:\ICT\block4\Cashapp\bin\Debug\Cashapp.pdb
-D:\ICT\block4\Cashapp\bin\Debug\MySql.Data.dll
-D:\ICT\block4\prop\applicaton for shop\Cashapp\bin\Debug\Cashapp.exe.config
-D:\ICT\block4\prop\applicaton for shop\Cashapp\obj\Debug\Cashapp.exe
-D:\ICT\block4\prop\applicaton for shop\Cashapp\obj\Debug\Cashapp.pdb
-D:\ICT\block4\prop\applicaton for shop\Cashapp\bin\Debug\Cashapp.exe
-D:\ICT\block4\prop\applicaton for shop\Cashapp\bin\Debug\Cashapp.pdb
-D:\ICT\block4\prop\applicaton for shop\Cashapp\obj\Debug\Cashapp.csprojResolveAssemblyReference.cache
-D:\ICT\block4\prop\applicaton for shop\Cashapp\obj\Debug\Cashapp.Form1.resources
-D:\ICT\block4\prop\applicaton for shop\Cashapp\obj\Debug\Cashapp.Properties.Resources.resources
-D:\ICT\block4\prop\applicaton for shop\Cashapp\obj\Debug\Cashapp.csproj.GenerateResource.Cache
-D:\ICT\block4\prop\applicaton for shop\Cashapp\bin\Debug\Phidget21.NET.dll
-C:\Users\Vaio\Desktop\Cashapp\bin\Debug\Cashapp.exe.config
-C:\Users\Vaio\Desktop\Cashapp\obj\Debug\Cashapp.exe
-C:\Users\Vaio\Desktop\Cashapp\obj\Debug\Cashapp.pdb
-C:\Users\Vaio\Desktop\Cashapp\bin\Debug\Cashapp.exe
-C:\Users\Vaio\Desktop\Cashapp\bin\Debug\Cashapp.pdb
-C:\Users\Vaio\Desktop\Cashapp\obj\Debug\Cashapp.csprojResolveAssemblyReference.cache
-C:\Users\Vaio\Desktop\Cashapp\obj\Debug\Cashapp.Form1.resources
-C:\Users\Vaio\Desktop\Cashapp\obj\Debug\Cashapp.Properties.Resources.resources
-C:\Users\Vaio\Desktop\Cashapp\obj\Debug\Cashapp.csproj.GenerateResource.Cache
-D:\ICT\block4\prop\Applications\App-for-renting-equipment\Cashapp\bin\Debug\Cashapp.exe.config
-D:\ICT\block4\prop\Applications\App-for-renting-equipment\Cashapp\obj\Debug\Cashapp.exe
-D:\ICT\block4\prop\Applications\App-for-renting-equipment\Cashapp\obj\Debug\Cashapp.pdb
-D:\ICT\block4\prop\Applications\App-for-renting-equipment\Cashapp\bin\Debug\Cashapp.exe
-D:\ICT\block4\prop\Applications\App-for-renting-equipment\Cashapp\bin\Debug\Cashapp.pdb
-D:\ICT\block4\prop\Applications\App-for-renting-equipment\Cashapp\obj\Debug\Cashapp.csprojResolveAssemblyReference.cache
-D:\ICT\block4\prop\Applications\App-for-renting-equipment\Cashapp\obj\Debug\Cashapp.Form1.resources
-D:\ICT\block4\prop\Applications\App-for-renting-equipment\Cashapp\obj\Debug\Cashapp.Properties.Resources.resources
-D:\ICT\block4\prop\Applications\App-for-renting-equipment\Cashapp\obj\Debug\Cashapp.csproj.GenerateResource.Cache
-D:\ICT\block4\prop\Applications\App-for-renting-equipment\RentApp\bin\Debug\Cashapp.exe.config
-D:\ICT\block4\prop\Applications\App-for-renting-equipment\RentApp\obj\Debug\Cashapp.exe
-D:\ICT\block4\prop\Applications\App-for-renting-equipment\RentApp\obj\Debug\Cashapp.pdb
-D:\ICT\block4\prop\Applications\App-for-renting-equipment\RentApp\bin\Debug\Cashapp.exe
-D:\ICT\block4\prop\Applications\App-for-renting-equipment\RentApp\bin\Debug\Cashapp.pdb
-D:\ICT\block4\prop\Applications\App-for-renting-equipment\RentApp\obj\Debug\Cashapp.csprojResolveAssemblyReference.cache
-D:\ICT\block4\prop\Applications\App-for-renting-equipment\RentApp\obj\Debug\Cashapp.Form1.resources
-D:\ICT\block4\prop\Applications\App-for-renting-equipment\RentApp\obj\Debug\Cashapp.Properties.Resources.resources
-D:\ICT\block4\prop\Applications\App-for-renting-equipment\RentApp\obj\Debug\Cashapp.csproj.GenerateResource.Cache
->>>>>>> e945a0263512027e62d6423966e8e58f8371b71f:App-Lending Stuff/RentApp/obj/Debug/Cashapp.csproj.FileListAbsolute.txt
