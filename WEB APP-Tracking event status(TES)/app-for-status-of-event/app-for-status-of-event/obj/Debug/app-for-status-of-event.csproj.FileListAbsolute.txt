@@ -1,0 +1,14 @@
+D:\ICT\block4\prop\Applications\App-for-status-of-event\app-for-status-of-event\app-for-status-of-event\bin\Debug\app-for-status-of-event.exe.config
+D:\ICT\block4\prop\Applications\App-for-status-of-event\app-for-status-of-event\app-for-status-of-event\bin\Debug\app-for-status-of-event.exe
+D:\ICT\block4\prop\Applications\App-for-status-of-event\app-for-status-of-event\app-for-status-of-event\bin\Debug\app-for-status-of-event.pdb
+D:\ICT\block4\prop\Applications\App-for-status-of-event\app-for-status-of-event\app-for-status-of-event\obj\Debug\app-for-status-of-event.csprojResolveAssemblyReference.cache
+D:\ICT\block4\prop\Applications\App-for-status-of-event\app-for-status-of-event\app-for-status-of-event\obj\Debug\app_for_status_of_event.Form1.resources
+D:\ICT\block4\prop\Applications\App-for-status-of-event\app-for-status-of-event\app-for-status-of-event\obj\Debug\app_for_status_of_event.Properties.Resources.resources
+D:\ICT\block4\prop\Applications\App-for-status-of-event\app-for-status-of-event\app-for-status-of-event\obj\Debug\app-for-status-of-event.csproj.GenerateResource.Cache
+D:\ICT\block4\prop\Applications\App-for-status-of-event\app-for-status-of-event\app-for-status-of-event\obj\Debug\app-for-status-of-event.exe
+D:\ICT\block4\prop\Applications\App-for-status-of-event\app-for-status-of-event\app-for-status-of-event\obj\Debug\app-for-status-of-event.pdb
+D:\ICT\block4\prop\Applications\App-for-status-of-event\app-for-status-of-event\app-for-status-of-event\obj\Debug\app_for_status_of_event.CampingStatus.resources
+D:\ICT\block4\prop\Applications\App-for-status-of-event\app-for-status-of-event\app-for-status-of-event\obj\Debug\app_for_status_of_event.EventStatus.resources
+D:\ICT\block4\prop\Applications\App-for-status-of-event\app-for-status-of-event\app-for-status-of-event\obj\Debug\app_for_status_of_event.VisitorStatus.resources
+D:\ICT\block4\prop\Applications\App-for-status-of-event\app-for-status-of-event\app-for-status-of-event\bin\Debug\MySql.Data.dll
+D:\ICT\block4\prop\Applications\App-for-status-of-event\app-for-status-of-event\app-for-status-of-event\obj\Debug\app_for_status_of_event.ShopStatus.resources
