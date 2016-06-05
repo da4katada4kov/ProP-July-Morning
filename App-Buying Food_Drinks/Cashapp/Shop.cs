@@ -41,9 +41,10 @@ namespace Cashapp
                     products.Add(new Product(id, price, description));
                 }
             }
-            catch
+            catch(Exception exc)
             {
-                MessageBox.Show("error while loading the products");
+                //MessageBox.Show("error while loading the products");
+                MessageBox.Show(exc.Message);
             }
             finally
             {

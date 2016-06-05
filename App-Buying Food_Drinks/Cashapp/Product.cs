@@ -29,7 +29,7 @@ namespace Cashapp
             this.PricePerOne = price;
             this.Description = desc;
         }
-        public string ToString()
+        public override string ToString()
         {
             return Description + " - Quantity: " + Quantity;
         }

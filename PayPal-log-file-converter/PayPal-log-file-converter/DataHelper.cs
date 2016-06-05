@@ -38,9 +38,5 @@ namespace PayPal_log_file_converter
             
         }
 
-        public void CloseConnection()
-        {
-            connection.Close();
-        }
     }
 }

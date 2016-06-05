@@ -25,11 +25,16 @@ namespace Cashapp
         }
         public int GetPurchaseID(int visitorid)
         {
+            String sql = "SELECT PurchaseID FROM purchase WHERE Timestamp = @timestamp";
+            String sql1 = "SELECT MIN(`Timestamp`) FROM `purchase` WHERE `VISITOR_VisitorID`=@visitorid";
+            MySqlCommand command = new MySqlCommand(sql, connection);
+            MySqlCommand command1 = new MySqlCommand(sql1, connection);
+            command1.Parameters.AddWithValue("@visitorid", visitorid);
+            
             try
             {
-                String sql = "SELECT PurchaseID FROM purchase p WHERE VISITOR_VisitorID = @visitorid HAVING Timestamp IN (SELECT MIN(Timestamp) FROM purchase o WHERE p.VISITOR_VisitorID = o.VISITOR_VisitorID)";
-                MySqlCommand command = new MySqlCommand(sql, connection);
-                command.Parameters.AddWithValue("@visitorid", visitorid);
+                DateTime timestamp = (DateTime)command1.ExecuteScalar();
+                command.Parameters.AddWithValue("@timestamp", timestamp);
                 int purchaseid = (int)command.ExecuteScalar();
 
                 return purchaseid;
@@ -40,34 +45,36 @@ namespace Cashapp
                 MessageBox.Show(exc.Message);
                 return -1;
             }
+            finally
+            {
+                connection.Close();
+            }
         }
         public void AddProduct_PurchaseToDB(string rfid, List<Product> products)
         {
+            String sql = "INSERT INTO purchase(SHOP_ShopID, VISITOR_VisitorID) VALUES (@shopid, @visitorid)";           
+            MySqlCommand command = new MySqlCommand(sql, connection);
+            int visitorid = GetvisitorID(rfid);
+            command.Parameters.AddWithValue("@shopid", 1);
+            command.Parameters.AddWithValue("@visitorid", visitorid);
+            
             try
             {
-            
-                String sql = "INSERT INTO purchase(SHOP_ShopID, VISITOR_VisitorID) VALUES (@shopid, @visitorid)";
-                MySqlCommand command = new MySqlCommand(sql, connection);
-                int visitorid = GetvisitorID(rfid);
-                command.Parameters.AddWithValue("@shopid", 1);
-                command.Parameters.AddWithValue("@visitorid", visitorid);            
-
                 connection.Open();
                 command.ExecuteNonQuery();
-                connection.Close();
 
                 int purchaseid = GetPurchaseID(visitorid);
                 foreach (var i in products)
                 {
+                    connection.Open();
                     String sql1 = "INSERT INTO purchase_has_product(PURCHASE_PurchaseID, PRODUCT_ProductID, QuantityBought) VALUES (@purchaseid, @productid, @quantity)";
                     MySqlCommand command1 = new MySqlCommand(sql1, connection);
-                    command.Parameters.AddWithValue("@purchaseid", purchaseid);
-                    command.Parameters.AddWithValue("@vproductid", i.ProductID);
-                    command.Parameters.AddWithValue("@quantity", i.Quantity);
+                    command1.Parameters.AddWithValue("@purchaseid", purchaseid);
+                    command1.Parameters.AddWithValue("@productid", i.ProductID);
+                    command1.Parameters.AddWithValue("@quantity", i.Quantity);
 
-                    connection.Open();
                     command1.ExecuteNonQuery();
-                    connection.Close();
+
                 }
             }
             catch (Exception exc)
@@ -75,17 +82,23 @@ namespace Cashapp
                 MessageBox.Show(exc.Message);
 
             }
+            finally
+            {
+                connection.Close();
+            }
 
         }
+       
         public int GetvisitorID(string rfid)
         {
-            //PROBLEM MAICHE 
+            //PROBLEM MAICHE
+            int visitorid;
+            String sql = "SELECT VisitorID FROM visitor WHERE RFID = @rfid;";
+            MySqlCommand command = new MySqlCommand(sql, connection);
+            command.Parameters.AddWithValue("@rfid", rfid);
             try
             {
-                int visitorid;
-                String sql = "SELECT VisitorID FROM visitor WHERE RFID = @rfid;";
-                MySqlCommand command = new MySqlCommand(sql, connection);
-                command.Parameters.AddWithValue("@rfid", rfid);
+                connection.Open();
                 visitorid = (int)command.ExecuteScalar();
 
                 return visitorid;
@@ -94,6 +107,10 @@ namespace Cashapp
             {
                 MessageBox.Show(exc.Message);
                 return -1;
+            }
+            finally
+            {
+                connection.Close();
             }
 
         }

@@ -303,5 +303,26 @@ namespace Cashapp
            
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            p = shop1.GetProduct("Lemon Juice");
+
+            AddNew();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            p = shop1.GetProduct("Cherry Juice");
+
+            AddNew();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            p = shop1.GetProduct("Lime Juice");
+
+            AddNew();
+        }
     }
 }

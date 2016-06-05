@@ -18,3 +18,6 @@ D:\ICT\block4\prop\Applications\App-for-paypal-logfiles\PayPal-log-file-converte
 D:\ICT\block4\prop\Applications\App-for-paypal-logfiles\PayPal-log-file-converter\PayPal-log-file-converter\obj\Debug\PayPal_log_file_converter.Form1.resources
 D:\ICT\block4\prop\Applications\App-for-paypal-logfiles\PayPal-log-file-converter\PayPal-log-file-converter\obj\Debug\PayPal_log_file_converter.Properties.Resources.resources
 D:\ICT\block4\prop\Applications\App-for-paypal-logfiles\PayPal-log-file-converter\PayPal-log-file-converter\obj\Debug\PayPal-log-file-converter.csproj.GenerateResource.Cache
+D:\ICT\block4\ProP-July-Morning\PayPal-log-file-converter\PayPal-log-file-converter\bin\Debug\PayPal-log-file-converter.exe.config
+D:\ICT\block4\ProP-July-Morning\PayPal-log-file-converter\PayPal-log-file-converter\obj\Debug\PayPal-log-file-converter.exe
+D:\ICT\block4\ProP-July-Morning\PayPal-log-file-converter\PayPal-log-file-converter\obj\Debug\PayPal-log-file-converter.pdb

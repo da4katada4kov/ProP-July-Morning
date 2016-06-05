@@ -54,3 +54,13 @@ C:\Users\Beco\Favorites\Desktop\Cashapp\obj\Debug\Cashapp.csprojResolveAssemblyR
 C:\Users\Beco\Favorites\Desktop\Cashapp\obj\Debug\Cashapp.Form1.resources
 C:\Users\Beco\Favorites\Desktop\Cashapp\obj\Debug\Cashapp.Properties.Resources.resources
 C:\Users\Beco\Favorites\Desktop\Cashapp\obj\Debug\Cashapp.csproj.GenerateResource.Cache
+D:\ICT\block4\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\bin\Debug\Cashapp.exe.config
+D:\ICT\block4\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\obj\Debug\Cashapp.exe
+D:\ICT\block4\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\obj\Debug\Cashapp.pdb
+D:\ICT\block4\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\bin\Debug\Cashapp.exe
+D:\ICT\block4\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\bin\Debug\Cashapp.pdb
+D:\ICT\block4\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\bin\Debug\Phidget21.NET.dll
+D:\ICT\block4\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\obj\Debug\Cashapp.csprojResolveAssemblyReference.cache
+D:\ICT\block4\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\obj\Debug\Cashapp.Form1.resources
+D:\ICT\block4\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\obj\Debug\Cashapp.Properties.Resources.resources
+D:\ICT\block4\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\obj\Debug\Cashapp.csproj.GenerateResource.Cache
