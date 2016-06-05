@@ -51,11 +51,15 @@ namespace Cashapp
 
         public void SayHello(object sender, TagEventArgs e)
         {
-            dh.AddProduct_PurchaseToDB(e.Tag, order.productlist);
+            dh.AddProduct_PurchaseToDB(e.Tag, order.productlist, order.Total);
             DialogResult dialogResult =MessageBox.Show("Hello visitor with rfid-nr " + e.Tag +
                 ".\nYour order has been processed!");
             if (dialogResult == DialogResult.OK)
+            {
                 Close();
+                dh.connection.Close();
+            }
+                
         }
     }
 }

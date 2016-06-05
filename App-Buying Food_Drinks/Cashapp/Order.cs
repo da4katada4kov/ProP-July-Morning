@@ -10,6 +10,7 @@ namespace Cashapp
     {
         public int OrderID { get; set; }
         public List<Product> productlist { get; set; }
+        public double Total { get; set; }
 
         public Order()
         {

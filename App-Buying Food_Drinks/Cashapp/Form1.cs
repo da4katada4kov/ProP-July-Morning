@@ -16,6 +16,7 @@ namespace Cashapp
         Order order;
         Product p;
         Visitor v;
+        DataHelper dh;
         double total = 0;
         public Form1()
         {
@@ -24,7 +25,14 @@ namespace Cashapp
             v = new Visitor();
             List<Product> prods = shop1.GetAllProducts();
             order = new Order();
+            dh = new DataHelper();
             
+        }
+        private void NewOrder()
+        {
+            //todo-clear order and listbox after info was passed to DB
+            //orderlist.Items.Clear();
+            order.productlist.Clear();
         }
         //updates listbox, total cost of order 
         private void Update() 
@@ -296,9 +304,12 @@ namespace Cashapp
                     v.Open();
                     orderlist.Items.Clear();
                     orderlist.Items.Add("Please identify yourself!");
+                    order.Total = total;
                     v.order = order;
-                    
+                    //NewOrder();
                 }
+                
+
             }
            
             

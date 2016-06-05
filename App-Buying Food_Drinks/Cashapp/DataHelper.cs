@@ -23,10 +23,11 @@ namespace Cashapp
 
             connection = new MySqlConnection(connectionInfo);
         }
+       
         public int GetPurchaseID(int visitorid)
         {
             String sql = "SELECT PurchaseID FROM purchase WHERE Timestamp = @timestamp";
-            String sql1 = "SELECT MIN(`Timestamp`) FROM `purchase` WHERE `VISITOR_VisitorID`=@visitorid";
+            String sql1 = "SELECT MAX(`Timestamp`) FROM `purchase` WHERE `VISITOR_VisitorID`=@visitorid";
             MySqlCommand command = new MySqlCommand(sql, connection);
             MySqlCommand command1 = new MySqlCommand(sql1, connection);
             command1.Parameters.AddWithValue("@visitorid", visitorid);
@@ -45,12 +46,9 @@ namespace Cashapp
                 MessageBox.Show(exc.Message);
                 return -1;
             }
-            finally
-            {
-                connection.Close();
-            }
+            
         }
-        public void AddProduct_PurchaseToDB(string rfid, List<Product> products)
+        public void AddProduct_PurchaseToDB(string rfid, List<Product> products, double ordertotal)
         {
             String sql = "INSERT INTO purchase(SHOP_ShopID, VISITOR_VisitorID) VALUES (@shopid, @visitorid)";           
             MySqlCommand command = new MySqlCommand(sql, connection);
@@ -66,7 +64,7 @@ namespace Cashapp
                 int purchaseid = GetPurchaseID(visitorid);
                 foreach (var i in products)
                 {
-                    connection.Open();
+                    
                     String sql1 = "INSERT INTO purchase_has_product(PURCHASE_PurchaseID, PRODUCT_ProductID, QuantityBought) VALUES (@purchaseid, @productid, @quantity)";
                     MySqlCommand command1 = new MySqlCommand(sql1, connection);
                     command1.Parameters.AddWithValue("@purchaseid", purchaseid);
@@ -74,8 +72,8 @@ namespace Cashapp
                     command1.Parameters.AddWithValue("@quantity", i.Quantity);
 
                     command1.ExecuteNonQuery();
-
                 }
+                UpdateVisitorBalance(visitorid, ordertotal);
             }
             catch (Exception exc)
             {
@@ -88,7 +86,22 @@ namespace Cashapp
             }
 
         }
-       
+        private void UpdateVisitorBalance(int visitorid, double ordertotal)
+        {
+            String sql = "UPDATE `visitor` SET `Balance`=`Balance`- @total WHERE `VisitorID`= @visitorid;";
+            MySqlCommand command = new MySqlCommand(sql, connection);
+            command.Parameters.AddWithValue("@total", ordertotal);
+            command.Parameters.AddWithValue("@visitorid", visitorid);
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+
+            }
+        }
         public int GetvisitorID(string rfid)
         {
             //PROBLEM MAICHE
