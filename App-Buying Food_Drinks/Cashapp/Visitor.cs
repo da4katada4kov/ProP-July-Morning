@@ -54,11 +54,10 @@ namespace Cashapp
             dh.AddProduct_PurchaseToDB(e.Tag, order.productlist, order.Total);
             DialogResult dialogResult =MessageBox.Show("Hello visitor with rfid-nr " + e.Tag +
                 ".\nYour order has been processed!");
-            if (dialogResult == DialogResult.OK)
-            {
-                Close();
+
+                //Close();
                 dh.connection.Close();
-            }
+
                 
         }
     }

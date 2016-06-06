@@ -31,8 +31,10 @@ namespace Cashapp
         private void NewOrder()
         {
             //todo-clear order and listbox after info was passed to DB
-            //orderlist.Items.Clear();
-            order.productlist.Clear();
+            orderlist.Items.Clear();
+            order = new Order();
+            total = 0;
+            lblTotal.Text = total.ToString() + "€";
         }
         //updates listbox, total cost of order 
         private void Update() 
@@ -283,33 +285,41 @@ namespace Cashapp
 
         private void btnCheckout_Click(object sender, EventArgs e)
         {
-            if (total == 0)
+            if (btnCheckout.Text == "Checkout")
             {
-                MessageBox.Show("Your order is empty. Please, select a product.");
+                if (total == 0)
+                {
+                    MessageBox.Show("Your order is empty. Please, select a product.");
+                }
+                else
+                {
+                    string info = "";
+                    foreach (Product i in order.productlist)
+                    {
+                        info += i.ToString() + " x " + i.PricePerOne + "€\n";
+                    }
+                    info += "---------------------------------\n";
+                    info += "\t\tTotal: " + total + "€\n\n\nIs this order correct?";
+                    string caption = "Your order";
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    DialogResult dialogResult = MessageBox.Show(info, caption, buttons);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        v.Open();
+                        orderlist.Items.Clear();
+                        orderlist.Items.Add("Please identify yourself!");
+                        order.Total = total;
+                        v.order = order;
+                        
+                    }
+                    
+                    btnCheckout.Text = "New Order";
+                }
             }
-            else
+            else if (btnCheckout.Text == "New Order")
             {
-                string info = "";
-                foreach (Product i in order.productlist)
-                {
-                    info += i.ToString() + " x " + i.PricePerOne + "€\n";
-                }
-                info += "---------------------------------\n";
-                info += "\t\tTotal: " + total + "€\n\n\nIs this order correct?";
-                string caption = "Your order";
-                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                DialogResult dialogResult=MessageBox.Show(info, caption,buttons);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    v.Open();
-                    orderlist.Items.Clear();
-                    orderlist.Items.Add("Please identify yourself!");
-                    order.Total = total;
-                    v.order = order;
-                    //NewOrder();
-                }
-                
-
+                NewOrder();
+                btnCheckout.Text = "Checkout";
             }
            
             
@@ -334,6 +344,11 @@ namespace Cashapp
             p = shop1.GetProduct("Lime Juice");
 
             AddNew();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            v.Close();
         }
     }
 }
