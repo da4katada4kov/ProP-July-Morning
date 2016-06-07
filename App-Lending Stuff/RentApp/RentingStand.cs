@@ -8,20 +8,20 @@ using System.Windows.Forms;
 
 namespace Cashapp
 {
-    public class Shop
+    public class RentingStand
     {
         DataHelper dh = new DataHelper();
         public int ShopId { get; set; }
         public string Name { get; set; }
-        private List<Product> products { get; set; }
+        private List<Equipment> products { get; set; }
 
-        public Shop(int id)
+        public RentingStand(int id)
         {
             this.ShopId = id;
-            products = new List<Product>();
+            products = new List<Equipment>();
         }
 
-        public List<Product> GetAllProducts()
+        public List<Equipment> GetAllProducts()
         {
             String sql = "SELECT * FROM equipment;";
             MySqlCommand command = new MySqlCommand(sql, dh.connection);
@@ -38,7 +38,7 @@ namespace Cashapp
                     id = Convert.ToInt32(reader[0]);
                     price = Convert.ToDouble(reader[2]);
                     description = reader[1].ToString();
-                    products.Add(new Product(id, price, description));
+                    products.Add(new Equipment(id, price, description));
                 }
             }
             catch
@@ -51,10 +51,10 @@ namespace Cashapp
             }
             return products;
         }
-        public Product GetProduct(string desc)
+        public Equipment GetProduct(string desc)
         {
-            List<Product> temp = GetAllProducts();
-            Product p = null;
+            List<Equipment> temp = GetAllProducts();
+            Equipment p = null;
             foreach (var i in temp)
             {
                 if (i.Description == desc)

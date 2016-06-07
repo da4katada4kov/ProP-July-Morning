@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Cashapp
 {
-    public class Product
+    public class Equipment
     {
         private int quantity;
-        public int ProductID { get; set; }
+        public int EquipmentID { get; set; }
         public double PricePerOne { get; set; }
         public string Description { get; set; }
         public int Quantity {
@@ -23,13 +23,13 @@ namespace Cashapp
             } 
         }
 
-        public Product(int id, double price, string desc)
+        public Equipment(int id, double price, string desc)
         {
-            this.ProductID = id;
+            this.EquipmentID = id;
             this.PricePerOne = price;
             this.Description = desc;
         }
-        public string ToString()
+        public override string ToString()
         {
             return Description + " - Quantity: " + Quantity;
         }

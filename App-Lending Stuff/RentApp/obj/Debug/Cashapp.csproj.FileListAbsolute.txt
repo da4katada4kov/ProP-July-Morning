@@ -63,3 +63,13 @@ D:\Files\Fontys\Project P\ProP-July-Morning\App-Lending Stuff\APP-Sketch&Descrip
 D:\Files\Fontys\Project P\ProP-July-Morning\App-Lending Stuff\APP-Sketch&Description\RentApp\obj\Debug\Cashapp.Form1.resources
 D:\Files\Fontys\Project P\ProP-July-Morning\App-Lending Stuff\APP-Sketch&Description\RentApp\obj\Debug\Cashapp.Properties.Resources.resources
 D:\Files\Fontys\Project P\ProP-July-Morning\App-Lending Stuff\APP-Sketch&Description\RentApp\obj\Debug\Cashapp.csproj.GenerateResource.Cache
+D:\ICT\block4\ProP-July-Morning\App-Lending Stuff\RentApp\bin\Debug\Cashapp.exe.config
+D:\ICT\block4\ProP-July-Morning\App-Lending Stuff\RentApp\obj\Debug\Cashapp.exe
+D:\ICT\block4\ProP-July-Morning\App-Lending Stuff\RentApp\obj\Debug\Cashapp.pdb
+D:\ICT\block4\ProP-July-Morning\App-Lending Stuff\RentApp\bin\Debug\Cashapp.exe
+D:\ICT\block4\ProP-July-Morning\App-Lending Stuff\RentApp\bin\Debug\Cashapp.pdb
+D:\ICT\block4\ProP-July-Morning\App-Lending Stuff\RentApp\bin\Debug\Phidget21.NET.dll
+D:\ICT\block4\ProP-July-Morning\App-Lending Stuff\RentApp\obj\Debug\Cashapp.csprojResolveAssemblyReference.cache
+D:\ICT\block4\ProP-July-Morning\App-Lending Stuff\RentApp\obj\Debug\Cashapp.Form1.resources
+D:\ICT\block4\ProP-July-Morning\App-Lending Stuff\RentApp\obj\Debug\Cashapp.Properties.Resources.resources
+D:\ICT\block4\ProP-July-Morning\App-Lending Stuff\RentApp\obj\Debug\Cashapp.csproj.GenerateResource.Cache
