@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.buttonLoad = new System.Windows.Forms.Button();
             this.buttonSaveToDB = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -35,24 +36,26 @@
             // 
             // buttonLoad
             // 
+            this.buttonLoad.BackColor = System.Drawing.Color.Yellow;
             this.buttonLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLoad.Location = new System.Drawing.Point(58, 323);
             this.buttonLoad.Name = "buttonLoad";
             this.buttonLoad.Size = new System.Drawing.Size(182, 59);
             this.buttonLoad.TabIndex = 0;
             this.buttonLoad.Text = "Load file";
-            this.buttonLoad.UseVisualStyleBackColor = true;
+            this.buttonLoad.UseVisualStyleBackColor = false;
             this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
             // 
             // buttonSaveToDB
             // 
+            this.buttonSaveToDB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.buttonSaveToDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSaveToDB.Location = new System.Drawing.Point(312, 323);
             this.buttonSaveToDB.Name = "buttonSaveToDB";
             this.buttonSaveToDB.Size = new System.Drawing.Size(182, 59);
             this.buttonSaveToDB.TabIndex = 1;
-            this.buttonSaveToDB.Text = "Save data to database";
-            this.buttonSaveToDB.UseVisualStyleBackColor = true;
+            this.buttonSaveToDB.Text = "Save to database";
+            this.buttonSaveToDB.UseVisualStyleBackColor = false;
             this.buttonSaveToDB.Click += new System.EventHandler(this.buttonSaveToDB_Click);
             // 
             // listBox1
@@ -69,10 +72,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(545, 414);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.buttonSaveToDB);
             this.Controls.Add(this.buttonLoad);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "PayPal log file converter";
             this.ResumeLayout(false);
