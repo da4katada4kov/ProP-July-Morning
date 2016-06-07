@@ -12,19 +12,27 @@ namespace Cashapp
 {
     public partial class Form1 : Form
     {
-        Shop shop1;
+        RentingStand shop1;
         Order order;
-        Product p;
+        Equipment p;
         Visitor v;
         double total = 0;
         public Form1()
         {
             InitializeComponent();
-            shop1 = new Shop(1);
+            shop1 = new RentingStand(1);
             v = new Visitor();
-            List<Product> prods = shop1.GetAllProducts();
+            List<Equipment> prods = shop1.GetAllProducts();
             order = new Order();
             
+        }
+        private void NewOrder()
+        {
+            //todo-clear order and listbox after info was passed to DB
+            orderlist.Items.Clear();
+            order = new Order();
+            total = 0;
+            lblTotal.Text = total.ToString() + "€";
         }
         //updates listbox, total cost of order 
         private void Update() 
@@ -148,7 +156,7 @@ namespace Cashapp
 
         private void btnSchweppes_Click(object sender, EventArgs e)
         {
-            Product p = shop1.GetProduct("Tablet");
+            Equipment p = shop1.GetProduct("Tablet");
 
             AddNew();
         }
@@ -170,32 +178,49 @@ namespace Cashapp
 
         private void btnCheckout_Click(object sender, EventArgs e)
         {
-            if (total == 0)
+            if (btnCheckout.Text == "Checkout")
             {
-                MessageBox.Show("Your order is empty. Please, select a product.");
-            }
-            else
-            {
-                string info = "";
-                foreach (Product i in order.productlist)
+                if (total == 0)
                 {
-                    info += i.ToString() + " x " + i.PricePerOne + "€\n";
+                    MessageBox.Show("Your order is empty. Please, select a product.");
                 }
-                info += "---------------------------------\n";
-                info += "\t\tTotal: " + total + "€\n\n\nIs this order correct?";
-                string caption = "Your order";
-                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                DialogResult dialogResult=MessageBox.Show(info, caption,buttons);
-                if (dialogResult == DialogResult.Yes)
+                else
                 {
-                    v.Open();
-                    MessageBox.Show("Please, identify yourself in order to pay.");
+                    string info = "";
+                    foreach (Equipment i in order.productlist)
+                    {
+                        info += i.ToString() + " x " + i.PricePerOne + "€\n";
+                    }
+                    info += "---------------------------------\n";
+                    info += "\t\tTotal: " + total + "€\n\n\nIs this order correct?";
+                    string caption = "Your order";
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    DialogResult dialogResult = MessageBox.Show(info, caption, buttons);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        v.Open();
+                        orderlist.Items.Clear();
+                        orderlist.Items.Add("Please identify yourself!");
+                        order.Total = total;
+                        v.order = order;
+
+                    }
                     
+                    btnCheckout.Text = "Next visitor";
                 }
-                v.Close();
+            }
+            else if (btnCheckout.Text == "Next visitor")
+            {
+                NewOrder();
+                btnCheckout.Text = "Checkout";
             }
            
             
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            v.Close();
         }
     }
 }

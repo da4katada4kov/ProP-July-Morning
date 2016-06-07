@@ -9,18 +9,19 @@ namespace Cashapp
     public class Order
     {
         public int OrderID { get; set; }
-        public List<Product> productlist { get; set; }
+        public List<Equipment> productlist { get; set; }
+        public double Total { get; set; }
 
         public Order()
         {
             OrderID++;
-            productlist = new List<Product>();
+            productlist = new List<Equipment>();
         }
 
-        public bool AddProduct(Product p)
+        public bool AddProduct(Equipment p)
         {
             bool x = true;
-            foreach (Product prod in productlist)
+            foreach (Equipment prod in productlist)
             {
                 if (prod.Description == p.Description)
                     x = false;
@@ -37,9 +38,9 @@ namespace Cashapp
             return x;
             
         }
-        public Product GetProduct(Product toGet)
+        public Equipment GetProduct(Equipment toGet)
         {
-            Product p = null;
+            Equipment p = null;
             foreach (var i in productlist)
             {
                 if (i.Description== toGet.Description)
