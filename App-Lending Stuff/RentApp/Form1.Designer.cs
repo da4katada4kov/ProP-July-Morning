@@ -42,6 +42,9 @@
             this.btnSpeaker = new System.Windows.Forms.Button();
             this.btnHoverBoard = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnCharger = new System.Windows.Forms.Button();
+            this.btnPhoneCharger = new System.Windows.Forms.Button();
+            this.btnUSB = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // orderlist
@@ -49,7 +52,7 @@
             this.orderlist.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderlist.FormattingEnabled = true;
             this.orderlist.ItemHeight = 20;
-            this.orderlist.Location = new System.Drawing.Point(433, 32);
+            this.orderlist.Location = new System.Drawing.Point(630, 26);
             this.orderlist.Name = "orderlist";
             this.orderlist.Size = new System.Drawing.Size(312, 324);
             this.orderlist.TabIndex = 0;
@@ -57,7 +60,7 @@
             // btnCheckout
             // 
             this.btnCheckout.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckout.Location = new System.Drawing.Point(433, 413);
+            this.btnCheckout.Location = new System.Drawing.Point(630, 412);
             this.btnCheckout.Name = "btnCheckout";
             this.btnCheckout.Size = new System.Drawing.Size(312, 61);
             this.btnCheckout.TabIndex = 1;
@@ -71,7 +74,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(559, 364);
+            this.label1.Location = new System.Drawing.Point(756, 361);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 38);
             this.label1.TabIndex = 2;
@@ -83,7 +86,7 @@
             this.lblTotal.BackColor = System.Drawing.Color.Transparent;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.White;
-            this.lblTotal.Location = new System.Drawing.Point(648, 364);
+            this.lblTotal.Location = new System.Drawing.Point(845, 361);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(64, 39);
             this.lblTotal.TabIndex = 3;
@@ -93,7 +96,7 @@
             // 
             this.btnCalcMinus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnCalcMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcMinus.Location = new System.Drawing.Point(433, 359);
+            this.btnCalcMinus.Location = new System.Drawing.Point(630, 356);
             this.btnCalcMinus.Name = "btnCalcMinus";
             this.btnCalcMinus.Size = new System.Drawing.Size(50, 50);
             this.btnCalcMinus.TabIndex = 28;
@@ -105,7 +108,7 @@
             // 
             this.btnCalcPlus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnCalcPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcPlus.Location = new System.Drawing.Point(496, 359);
+            this.btnCalcPlus.Location = new System.Drawing.Point(693, 356);
             this.btnCalcPlus.Name = "btnCalcPlus";
             this.btnCalcPlus.Size = new System.Drawing.Size(50, 50);
             this.btnCalcPlus.TabIndex = 30;
@@ -178,18 +181,51 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(435, 13);
+            this.label2.Location = new System.Drawing.Point(627, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 13);
             this.label2.TabIndex = 38;
             this.label2.Text = "*Select product from list";
+            // 
+            // btnCharger
+            // 
+            this.btnCharger.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCharger.BackgroundImage")));
+            this.btnCharger.Location = new System.Drawing.Point(424, 168);
+            this.btnCharger.Name = "btnCharger";
+            this.btnCharger.Size = new System.Drawing.Size(200, 150);
+            this.btnCharger.TabIndex = 39;
+            this.btnCharger.UseVisualStyleBackColor = true;
+            this.btnCharger.Click += new System.EventHandler(this.btnCharger_Click);
+            // 
+            // btnPhoneCharger
+            // 
+            this.btnPhoneCharger.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPhoneCharger.BackgroundImage")));
+            this.btnPhoneCharger.Location = new System.Drawing.Point(424, 12);
+            this.btnPhoneCharger.Name = "btnPhoneCharger";
+            this.btnPhoneCharger.Size = new System.Drawing.Size(200, 150);
+            this.btnPhoneCharger.TabIndex = 40;
+            this.btnPhoneCharger.UseVisualStyleBackColor = true;
+            this.btnPhoneCharger.Click += new System.EventHandler(this.btnPhoneCharger_Click);
+            // 
+            // btnUSB
+            // 
+            this.btnUSB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUSB.BackgroundImage")));
+            this.btnUSB.Location = new System.Drawing.Point(424, 324);
+            this.btnUSB.Name = "btnUSB";
+            this.btnUSB.Size = new System.Drawing.Size(200, 150);
+            this.btnUSB.TabIndex = 41;
+            this.btnUSB.UseVisualStyleBackColor = true;
+            this.btnUSB.Click += new System.EventHandler(this.btnUSB_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(757, 485);
+            this.ClientSize = new System.Drawing.Size(951, 485);
+            this.Controls.Add(this.btnUSB);
+            this.Controls.Add(this.btnPhoneCharger);
+            this.Controls.Add(this.btnCharger);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCalcPlus);
             this.Controls.Add(this.btnCalcMinus);
@@ -228,6 +264,9 @@
         private System.Windows.Forms.Button btnSpeaker;
         private System.Windows.Forms.Button btnHoverBoard;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnCharger;
+        private System.Windows.Forms.Button btnPhoneCharger;
+        private System.Windows.Forms.Button btnUSB;
     }
 }
 

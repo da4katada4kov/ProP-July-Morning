@@ -174,7 +174,26 @@ namespace Cashapp
 
             AddNew();
         }
+        private void btnPhoneCharger_Click(object sender, EventArgs e)
+        {
+            p = shop1.GetProduct("Phone Charger");
 
+            AddNew();
+        }
+
+        private void btnCharger_Click(object sender, EventArgs e)
+        {
+            p = shop1.GetProduct("Laptop Charger");
+
+            AddNew();
+        }
+
+        private void btnUSB_Click(object sender, EventArgs e)
+        {
+            p = shop1.GetProduct("USB Cable");
+
+            AddNew();
+        }
 
         private void btnCheckout_Click(object sender, EventArgs e)
         {
@@ -222,5 +241,7 @@ namespace Cashapp
         {
             v.Close();
         }
+
+        
     }
 }
