@@ -64,3 +64,6 @@ D:\ICT\block4\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\obj\Debug\Cashapp
 D:\ICT\block4\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\obj\Debug\Cashapp.Form1.resources
 D:\ICT\block4\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\obj\Debug\Cashapp.Properties.Resources.resources
 D:\ICT\block4\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\obj\Debug\Cashapp.csproj.GenerateResource.Cache
+D:\Files\Fontys\Project P\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\bin\Debug\Cashapp.exe.config
+D:\Files\Fontys\Project P\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\obj\Debug\Cashapp.exe
+D:\Files\Fontys\Project P\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\obj\Debug\Cashapp.pdb

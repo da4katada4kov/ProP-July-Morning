@@ -34,3 +34,6 @@ D:\ICT\block4\prop\Applications\App-at-entrance-of-event\ChipSetApp\ChipSetApp\o
 D:\ICT\block4\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\bin\Debug\ChipSetApp.exe.config
 D:\ICT\block4\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.exe
 D:\ICT\block4\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.pdb
+D:\Files\Fontys\Project P\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\bin\Debug\ChipSetApp.exe.config
+D:\Files\Fontys\Project P\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.exe
+D:\Files\Fontys\Project P\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.pdb
