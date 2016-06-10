@@ -47,42 +47,6 @@ E:\Fontys Files\ProP\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\
 E:\Fontys Files\ProP\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.Properties.Resources.resources
 E:\Fontys Files\ProP\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.csproj.GenerateResource.Cache
 =======
-D:\Fontys Files\ProP\ChipSetApp\ChipSetApp\bin\Debug\ChipSetApp.exe.config
-D:\Fontys Files\ProP\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.csprojResolveAssemblyReference.cache
-D:\Fontys Files\ProP\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.Form1.resources
-D:\Fontys Files\ProP\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.Properties.Resources.resources
-D:\Fontys Files\ProP\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.csproj.GenerateResource.Cache
-D:\Fontys Files\ProP\ChipSetApp\ChipSetApp\bin\Debug\ChipSetApp.exe
-D:\Fontys Files\ProP\ChipSetApp\ChipSetApp\bin\Debug\ChipSetApp.pdb
-D:\Fontys Files\ProP\ChipSetApp\ChipSetApp\bin\Debug\MySql.Data.dll
-D:\Fontys Files\ProP\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.exe
-D:\Fontys Files\ProP\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.pdb
-E:\Fontys Files\ProP\ChipSetApp\ChipSetApp\bin\Debug\ChipSetApp.exe.config
-E:\Fontys Files\ProP\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.exe
-E:\Fontys Files\ProP\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.pdb
-E:\Fontys Files\ProP\ChipSetApp\ChipSetApp\bin\Debug\ChipSetApp.exe
-E:\Fontys Files\ProP\ChipSetApp\ChipSetApp\bin\Debug\ChipSetApp.pdb
-E:\Fontys Files\ProP\ChipSetApp\ChipSetApp\bin\Debug\MySql.Data.dll
-E:\Fontys Files\ProP\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.csprojResolveAssemblyReference.cache
-E:\Fontys Files\ProP\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.Form1.resources
-E:\Fontys Files\ProP\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.Properties.Resources.resources
-E:\Fontys Files\ProP\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.csproj.GenerateResource.Cache
-E:\Fontys Files\ProP\ChipSetApp\ChipSetApp\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
-E:\Fontys Files\ProP\ChipSetApp\ChipSetApp\bin\Debug\Phidget21.NET.2.1.8.19.Fakes.xml
-D:\ICT\block4\prop\Applications\App-at-entrance-of-event\ChipSetApp\ChipSetApp\bin\Debug\ChipSetApp.exe.config
-D:\ICT\block4\prop\Applications\App-at-entrance-of-event\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.exe
-D:\ICT\block4\prop\Applications\App-at-entrance-of-event\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.pdb
-D:\ICT\block4\prop\Applications\App-at-entrance-of-event\ChipSetApp\ChipSetApp\bin\Debug\ChipSetApp.exe
-D:\ICT\block4\prop\Applications\App-at-entrance-of-event\ChipSetApp\ChipSetApp\bin\Debug\ChipSetApp.pdb
-D:\ICT\block4\prop\Applications\App-at-entrance-of-event\ChipSetApp\ChipSetApp\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
-D:\ICT\block4\prop\Applications\App-at-entrance-of-event\ChipSetApp\ChipSetApp\bin\Debug\Phidget21.NET.2.1.8.19.Fakes.xml
-D:\ICT\block4\prop\Applications\App-at-entrance-of-event\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.csprojResolveAssemblyReference.cache
-D:\ICT\block4\prop\Applications\App-at-entrance-of-event\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.Form1.resources
-D:\ICT\block4\prop\Applications\App-at-entrance-of-event\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.Properties.Resources.resources
-D:\ICT\block4\prop\Applications\App-at-entrance-of-event\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.csproj.GenerateResource.Cache
-D:\ICT\block4\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\bin\Debug\ChipSetApp.exe.config
-D:\ICT\block4\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.exe
-D:\ICT\block4\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.pdb
 D:\Files\Fontys\Project P\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\bin\Debug\ChipSetApp.exe.config
 D:\Files\Fontys\Project P\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.exe
 D:\Files\Fontys\Project P\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.pdb
