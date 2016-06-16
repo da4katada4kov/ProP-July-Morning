@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PayPal_log_file_converter
 {
@@ -22,19 +23,31 @@ namespace PayPal_log_file_converter
             connection = new MySqlConnection(connectionInfo);
         }
 
-        public void AddLogToDatabase(int transactionid, double amount, DateTime enddate, int visitorid)
+        public bool AddLogToDatabase(int transactionid, double amount, DateTime enddate, int visitorid)
         {
 
             String sql = "INSERT INTO transactions(TransactionID, VISITOR_VisitorID, AmountDeposited, Date) VALUES (@transactionid, @visitorid, @amount, @enddate)";
             MySqlCommand command = new MySqlCommand(sql, connection);
-            command.Parameters.AddWithValue("@transactionid", transactionid);
-            command.Parameters.AddWithValue("@visitorid", visitorid);
-            command.Parameters.AddWithValue("@amount", amount);
-            command.Parameters.AddWithValue("@enddate", enddate);
-                        
-            connection.Open();
-            command.ExecuteNonQuery();           
-            connection.Close();
+            try
+            {
+                command.Parameters.AddWithValue("@transactionid", transactionid);
+                command.Parameters.AddWithValue("@visitorid", visitorid);
+                command.Parameters.AddWithValue("@amount", amount);
+                command.Parameters.AddWithValue("@enddate", enddate);
+
+                connection.Open();
+                command.ExecuteNonQuery();
+                return true;
+            }
+            catch (MySqlException exc)
+            {
+                //MessageBox.Show("Log file has already been processed!");
+                return false;
+            }
+            finally
+            {
+                connection.Close();
+            }
             
         }
 

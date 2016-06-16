@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,7 @@ namespace Cashapp
             List<Product> prods = shop1.GetAllProducts();
             order = new Order();
             dh = new DataHelper();
+            
             
         }
         private void NewOrder()
@@ -109,6 +111,7 @@ namespace Cashapp
                 Update();
             }
         }
+  
         private void button3_Click(object sender, EventArgs e)
         {
             p = shop1.GetProduct("Sprite");     
@@ -310,6 +313,7 @@ namespace Cashapp
                         orderlist.Items.Add("Please identify yourself!");
                         order.Total = total;
                         v.order = order;
+                        SaveReceipt(order.productlist);
                         
                     }
                     
@@ -323,6 +327,36 @@ namespace Cashapp
             }
            
             
+        }
+        private void SaveReceipt(List<Product> products)
+        {
+            FileStream fs = null;
+            StreamWriter sr = null;
+            try
+            {
+                fs = new FileStream("receipts.txt", FileMode.OpenOrCreate, FileAccess.Write);
+                sr = new StreamWriter(fs);
+                foreach (Product i in products)
+                {
+                    sr.WriteLine(i.ToString() + " x " + i.PricePerOne.ToString() + "€");
+                }
+                sr.WriteLine("Total: " + total.ToString());
+                sr.WriteLine("---------------------------------");
+                
+
+
+            }
+            catch (IOException exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                if (sr != null)
+                    sr.Close();
+                if (fs != null)
+                    fs.Close();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

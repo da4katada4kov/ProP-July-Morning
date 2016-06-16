@@ -21,16 +21,40 @@ namespace app_for_status_of_event
         {
             InitializeComponent();
             v = new Visitor();
-            
-        }
-        private void ShowListBox()
-        {
+            status = new Button();
+            int widthOfAButton = 150, heightOfAButton = 60;
+            status.Size = new System.Drawing.Size(widthOfAButton, heightOfAButton);
+            status.Location = new System.Drawing.Point(70, 140);
+            status.BackColor = Color.Tomato;
+            status.Text = "Show status";
+
+            tbstatus = new TextBox();
+            tbstatus.Width = 150;
+            tbstatus.Location = new System.Drawing.Point(70, 110);
+
+            label3.Text = "Visitor id:";
+            this.label3.Location = new System.Drawing.Point(115, 79);
+
+            this.Controls.Add(tbstatus);
+            this.Controls.Add(status);
+
             lb = new ListBox();
-            lb.Width = 180;
+            lb.Width = 185;
             lb.Height = 220;
             lb.Location = new System.Drawing.Point(270, 50);
             this.Controls.Add(lb);
+
+            status.Click += GetVisitorStatus;
+            
         }
+        //private void ShowListBox()
+        //{
+        //    lb = new ListBox();
+        //    lb.Width = 180;
+        //    lb.Height = 220;
+        //    lb.Location = new System.Drawing.Point(270, 50);
+        //    this.Controls.Add(lb);
+        //}
        
         private void RemoveControls()
         {
@@ -54,21 +78,6 @@ namespace app_for_status_of_event
                 this.Controls.Remove(btnhistory);
                 btnhistory.Dispose();
             }
-            if (this.Contains(label1))
-            {
-                this.Controls.Remove(label1);
-                label1.Dispose();
-            }
-            if (this.Contains(label2))
-            {
-                this.Controls.Remove(label2);
-                label2.Dispose();
-            }
-            if (this.Contains(pictureBox1))
-            {
-                this.Controls.Remove(pictureBox1);
-                pictureBox1.Dispose();
-            }
             if (this.Contains(btncalculate))
             {
                 this.Controls.Remove(btncalculate);
@@ -86,6 +95,15 @@ namespace app_for_status_of_event
                 {
                     lb.Items.Add("ID: " + tbstatus.Text);
                     lb.Items.Add(vis.FirstName + " " + vis.LastName);
+                    lb.Items.Add("Balance: " + vis.Balance);
+                    if (vis.GuestOf != -1)
+                    {
+                        lb.Items.Add("At camping spot number: " + vis.GetCampingSpotId(vis));
+                        if(vis.GuestOf!=vis.ID)
+                            lb.Items.Add("Guest of visitor with id: " + vis.GuestOf);
+                        else
+                            lb.Items.Add("Paying for it himself");
+                    }
                     if(vis.Active==1)
                         lb.Items.Add("Currently at the event.");
                     else
@@ -100,24 +118,84 @@ namespace app_for_status_of_event
                 MessageBox.Show("Please enter a number.");
             }
         }
-     
+        private void GetVisitorHistory(object sender, EventArgs e)
+        {
+            try
+            {
+                lb.Items.Clear();
+                Visitor vis = v.GetVisitor(Convert.ToInt32(tbhistory.Text));
+                if(vis!=null)
+                {
+                    int visitorid = Convert.ToInt32(tbhistory.Text);
+                    double totalmoneyFromTransactions = v.GetTotalFromTransactions(visitorid);
+                    double moneyonfood = v.GetMoneySpentOnFood(visitorid);
+                    lb.Items.Add("Total money transfered:");
+                    lb.Items.Add(totalmoneyFromTransactions);
+                    lb.Items.Add("Money spent on food:");
+                    lb.Items.Add(moneyonfood);
+                }
+                else
+                {
+                    lb.Items.Add("There is no such visitor");
+                }
+                
+                
+            }
+            catch (FormatException exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+        }
+        private void GetTotalBalance(object sender, EventArgs e)
+        {
+            //try
+            //{
+                lb.Items.Clear();
+                double total = v.GetTotalBalance();
+                lb.Items.Add("Total balance: " + total);
+
+
+            //}
+            //catch (Exception exc)
+            //{
+               // MessageBox.Show(exc.Message);
+            //}
+        }
+        private void GetTotalMoneySpent(object sender, EventArgs e)
+        {
+            //try
+            //{
+                lb.Items.Clear();
+                double onfood = v.GetTotalMoneySpentOnFood();
+                int ontickets = v.GetTotalMoneySpentOnTickets();
+
+                lb.Items.Add("Money spent on: ");
+                lb.Items.Add("Tickets: " + ontickets);
+                lb.Items.Add("Food: " + onfood);
+            //}
+            //catch (Exception exc)
+            //{
+                //MessageBox.Show(exc.Message);
+            //}
+        }
         private void visitorStatusToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RemoveControls();
 
-            ShowListBox();
+            //ShowListBox();
 
             status = new Button();
             int widthOfAButton = 150, heightOfAButton = 60;
             status.Size = new System.Drawing.Size(widthOfAButton, heightOfAButton);
             status.Location = new System.Drawing.Point(70, 140);
             status.Text = "Show status";
+            status.BackColor = Color.Tomato;
 
             tbstatus = new TextBox();
             tbstatus.Width = 150;
             tbstatus.Location = new System.Drawing.Point(70, 110);
 
-            label3.Text = "Visitor id: ";
+            label3.Text = "Visitor id:";
             this.label3.Location = new System.Drawing.Point(115, 79);
 
             this.Controls.Add(tbstatus);
@@ -129,30 +207,31 @@ namespace app_for_status_of_event
         private void visitorHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RemoveControls();
-
-            ShowListBox();
+            //ShowListBox();
 
             btnhistory = new Button();
             int widthOfAButton = 150, heightOfAButton = 60;
             btnhistory.Size = new System.Drawing.Size(widthOfAButton, heightOfAButton);
             btnhistory.Location = new System.Drawing.Point(70, 140);
             btnhistory.Text = "Show history";
+            btnhistory.BackColor = Color.Tomato;
 
             tbhistory = new TextBox();
             tbhistory.Width = 150;
             tbhistory.Location = new System.Drawing.Point(70, 110);
 
-            label3.Text = "Visitor id: ";
+            label3.Text = "Visitor id:";
             this.label3.Location = new System.Drawing.Point(115, 79);
 
             this.Controls.Add(tbhistory);
             this.Controls.Add(btnhistory);
+            btnhistory.Click += GetVisitorHistory;
         }
 
         private void totalBalanceToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RemoveControls();
-            ShowListBox();
+            //ShowListBox();
 
             label3.Text = "What is the total balance of all visitors?";
             this.label3.Location = new System.Drawing.Point(15, 100);
@@ -162,14 +241,17 @@ namespace app_for_status_of_event
             btncalculate.Size = new System.Drawing.Size(widthOfAButton, heightOfAButton);
             btncalculate.Location = new System.Drawing.Point(65, 140);
             btncalculate.Text = "Calculate";
+            btncalculate.BackColor = Color.Tomato;
 
             this.Controls.Add(btncalculate);
+
+            btncalculate.Click += GetTotalBalance;
         }
 
         private void totalMoneySpentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RemoveControls();
-            ShowListBox();
+            //ShowListBox();
 
             label3.Text = "How much money were spent in total?";
             this.label3.Location = new System.Drawing.Point(20, 100);
@@ -179,8 +261,11 @@ namespace app_for_status_of_event
             btncalculate.Size = new System.Drawing.Size(widthOfAButton, heightOfAButton);
             btncalculate.Location = new System.Drawing.Point(65, 140);
             btncalculate.Text = "Calculate";
+            btncalculate.BackColor = Color.Tomato;
 
             this.Controls.Add(btncalculate);
+
+            btncalculate.Click += GetTotalMoneySpent;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

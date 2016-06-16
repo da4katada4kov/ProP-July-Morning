@@ -25,7 +25,6 @@ namespace Cashapp
         }
         public int GetvisitorID(string rfid)
         {
-            //PROBLEM MAICHE
             int visitorid;
             String sql = "SELECT VisitorID FROM visitor WHERE RFID = @rfid;";
             MySqlCommand command = new MySqlCommand(sql, connection);
@@ -50,9 +49,16 @@ namespace Cashapp
             MySqlCommand command = new MySqlCommand(sql, connection);
             command.Parameters.AddWithValue("@total", ordertotal);
             command.Parameters.AddWithValue("@visitorid", visitorid);
+            String sql1 = "Select Balance from visitor WHERE VisitorID = @visitorid";
+            MySqlCommand command1 = new MySqlCommand(sql1, connection);
+            command1.Parameters.AddWithValue("@visitorid", visitorid);
             try
             {
-                command.ExecuteNonQuery();
+                double balance = (double)command1.ExecuteScalar();
+                if (balance >= ordertotal)
+                    command.ExecuteNonQuery();
+                else
+                    MessageBox.Show("Insufficient balance");
             }
             catch (Exception exc)
             {

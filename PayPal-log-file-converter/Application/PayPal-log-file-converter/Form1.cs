@@ -92,17 +92,22 @@ namespace PayPal_log_file_converter
         {
             try
             {
+                bool x=true;
                 foreach (var i in lf.deposits)
                 {
-                    dh.AddLogToDatabase(i.IdNr, i.Amount, lf.EndDate, i.VisitorID);
+                    x = dh.AddLogToDatabase(i.IdNr, i.Amount, lf.EndDate, i.VisitorID);
                 }
-                dh.CloseConnection();
+                dh.connection.Close();
                 listBox1.Items.Clear();
-                listBox1.Items.Add("Successfully transferred data to DB!");
+                if(x==true)
+                    listBox1.Items.Add("Successfully transferred data to DB!");
+                else
+                    listBox1.Items.Add("Log file has already been processed!");
+
             }
             catch(Exception exc)
             {
-                dh.CloseConnection();
+                dh.connection.Close();
                 listBox1.Items.Clear();
                 listBox1.Items.Add("This data already exist in the DB!");
                 listBox1.Items.Add(exc.Message);               

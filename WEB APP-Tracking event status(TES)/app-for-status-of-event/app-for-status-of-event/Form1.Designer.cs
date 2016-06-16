@@ -37,58 +37,65 @@
             // 
             // buttonStatusVisitor
             // 
-            this.buttonStatusVisitor.Font = new System.Drawing.Font("Bookman Old Style", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonStatusVisitor.Location = new System.Drawing.Point(26, 32);
+            this.buttonStatusVisitor.BackColor = System.Drawing.Color.Tomato;
+            this.buttonStatusVisitor.Font = new System.Drawing.Font("Bookman Old Style", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonStatusVisitor.Location = new System.Drawing.Point(12, 12);
             this.buttonStatusVisitor.Name = "buttonStatusVisitor";
-            this.buttonStatusVisitor.Size = new System.Drawing.Size(150, 74);
+            this.buttonStatusVisitor.Size = new System.Drawing.Size(164, 112);
             this.buttonStatusVisitor.TabIndex = 0;
             this.buttonStatusVisitor.Text = "Visitor";
-            this.buttonStatusVisitor.UseVisualStyleBackColor = true;
+            this.buttonStatusVisitor.UseVisualStyleBackColor = false;
             this.buttonStatusVisitor.Click += new System.EventHandler(this.buttonStatusVisitor_Click);
             // 
             // buttonStatusEvent
             // 
-            this.buttonStatusEvent.Font = new System.Drawing.Font("Bookman Old Style", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonStatusEvent.Location = new System.Drawing.Point(194, 130);
+            this.buttonStatusEvent.BackColor = System.Drawing.Color.Gold;
+            this.buttonStatusEvent.Font = new System.Drawing.Font("Bookman Old Style", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonStatusEvent.Location = new System.Drawing.Point(182, 130);
             this.buttonStatusEvent.Name = "buttonStatusEvent";
-            this.buttonStatusEvent.Size = new System.Drawing.Size(150, 74);
+            this.buttonStatusEvent.Size = new System.Drawing.Size(163, 102);
             this.buttonStatusEvent.TabIndex = 1;
             this.buttonStatusEvent.Text = "Event";
-            this.buttonStatusEvent.UseVisualStyleBackColor = true;
+            this.buttonStatusEvent.UseVisualStyleBackColor = false;
             this.buttonStatusEvent.Click += new System.EventHandler(this.buttonStatusEvent_Click);
             // 
             // buttonStatusCamping
             // 
-            this.buttonStatusCamping.Font = new System.Drawing.Font("Bookman Old Style", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonStatusCamping.Location = new System.Drawing.Point(194, 32);
+            this.buttonStatusCamping.BackColor = System.Drawing.Color.YellowGreen;
+            this.buttonStatusCamping.Font = new System.Drawing.Font("Bookman Old Style", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonStatusCamping.Location = new System.Drawing.Point(182, 12);
             this.buttonStatusCamping.Name = "buttonStatusCamping";
-            this.buttonStatusCamping.Size = new System.Drawing.Size(150, 74);
+            this.buttonStatusCamping.Size = new System.Drawing.Size(163, 112);
             this.buttonStatusCamping.TabIndex = 2;
             this.buttonStatusCamping.Text = "Camping";
-            this.buttonStatusCamping.UseVisualStyleBackColor = true;
+            this.buttonStatusCamping.UseVisualStyleBackColor = false;
             this.buttonStatusCamping.Click += new System.EventHandler(this.buttonStatusCamping_Click);
             // 
             // buttonStatusShop
             // 
-            this.buttonStatusShop.Font = new System.Drawing.Font("Bookman Old Style", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonStatusShop.Location = new System.Drawing.Point(26, 130);
+            this.buttonStatusShop.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.buttonStatusShop.Font = new System.Drawing.Font("Bookman Old Style", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonStatusShop.Location = new System.Drawing.Point(12, 130);
             this.buttonStatusShop.Name = "buttonStatusShop";
-            this.buttonStatusShop.Size = new System.Drawing.Size(150, 74);
+            this.buttonStatusShop.Size = new System.Drawing.Size(164, 102);
             this.buttonStatusShop.TabIndex = 3;
             this.buttonStatusShop.Text = "Shop";
-            this.buttonStatusShop.UseVisualStyleBackColor = true;
+            this.buttonStatusShop.UseVisualStyleBackColor = false;
             this.buttonStatusShop.Click += new System.EventHandler(this.buttonStatusShop_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 231);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(358, 243);
             this.Controls.Add(this.buttonStatusShop);
             this.Controls.Add(this.buttonStatusCamping);
             this.Controls.Add(this.buttonStatusEvent);
             this.Controls.Add(this.buttonStatusVisitor);
             this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Status";

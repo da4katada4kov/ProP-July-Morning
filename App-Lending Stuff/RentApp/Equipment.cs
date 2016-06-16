@@ -12,6 +12,7 @@ namespace Cashapp
         public int EquipmentID { get; set; }
         public double PricePerOne { get; set; }
         public string Description { get; set; }
+        public string ItemName { get; set; }
         public int Quantity {
             get { return quantity; }
             set

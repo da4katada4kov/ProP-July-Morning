@@ -10,6 +10,7 @@ namespace Cashapp
 {
     public class Shop
     {
+        
         DataHelper dh = new DataHelper();
         public int ShopId { get; set; }
         public string Name { get; set; }
@@ -32,7 +33,8 @@ namespace Cashapp
 
                 string description;
                 int id;
-                double price; ;
+                double price;
+                //int quantityavailable;
                 while (reader.Read())
                 {
                     id = Convert.ToInt32(reader[0]);
@@ -40,6 +42,10 @@ namespace Cashapp
                     description = reader[2].ToString();
                     products.Add(new Product(id, price, description));
                 }
+                //foreach (var i in products)
+                //{
+                //    i.QuantityAvailable = GetAvailableQuantity(i.ProductID);
+                //}
             }
             catch(Exception exc)
             {
@@ -52,6 +58,7 @@ namespace Cashapp
             }
             return products;
         }
+       
         public Product GetProduct(string desc)
         {
             List<Product> temp = GetAllProducts();
@@ -60,6 +67,12 @@ namespace Cashapp
             {
                 if (i.Description == desc)
                     p = i;
+                //if (i.QuantityAvailable < i.Quantity)
+                //{
+                //    if (ProductIsOutOfStock != null)
+                //        ProductIsOutOfStock(i, i.QuantityAvailable);
+                //}
+
             }
 
             if (p != null)

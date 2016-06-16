@@ -50,11 +50,12 @@ namespace Cashapp
         }
         public void AddProduct_PurchaseToDB(string rfid, List<Product> products, double ordertotal)
         {
-            String sql = "INSERT INTO purchase(SHOP_ShopID, VISITOR_VisitorID) VALUES (@shopid, @visitorid)";           
+            String sql = "INSERT INTO purchase(SHOP_ShopID, VISITOR_VisitorID,Total) VALUES (@shopid, @visitorid,@total)";           
             MySqlCommand command = new MySqlCommand(sql, connection);
             int visitorid = GetvisitorID(rfid);
             command.Parameters.AddWithValue("@shopid", 1);
             command.Parameters.AddWithValue("@visitorid", visitorid);
+            command.Parameters.AddWithValue("@total", ordertotal);
             
             try
             {
@@ -72,6 +73,7 @@ namespace Cashapp
                     command1.Parameters.AddWithValue("@quantity", i.Quantity);
 
                     command1.ExecuteNonQuery();
+                    UpdateProductQuantity(i.ProductID, i.Quantity);
                 }
                 UpdateVisitorBalance(visitorid, ordertotal);
             }
@@ -126,6 +128,22 @@ namespace Cashapp
                 connection.Close();
             }
 
+        }
+        public void UpdateProductQuantity(int productid, int quantitybought)
+        {
+            String sql = "UPDATE `shop_has_product` SET `QuantityAvailable`= `QuantityAvailable` - @quantitybought WHERE `PRODUCT_ProductID`= @productid;";
+            MySqlCommand command = new MySqlCommand(sql, connection);
+            command.Parameters.AddWithValue("@quantitybought", quantitybought);
+            command.Parameters.AddWithValue("@productid", productid);
+
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
         }
     }
 }

@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Cashapp
 {
-    public partial class Form1 : Form
+    public partial class Rent : Form
     {
         RentingStand shop1;
         Order order;
         Equipment p;
         Visitor v;
         double total = 0;
-        public Form1()
+        public Rent()
         {
             InitializeComponent();
             shop1 = new RentingStand(1);
@@ -222,7 +222,6 @@ namespace Cashapp
                         orderlist.Items.Add("Please identify yourself!");
                         order.Total = total;
                         v.order = order;
-
                     }
                     
                     btnCheckout.Text = "Next visitor";
