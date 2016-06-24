@@ -89,7 +89,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(358, 243);
+            this.ClientSize = new System.Drawing.Size(358, 244);
             this.Controls.Add(this.buttonStatusShop);
             this.Controls.Add(this.buttonStatusCamping);
             this.Controls.Add(this.buttonStatusEvent);
