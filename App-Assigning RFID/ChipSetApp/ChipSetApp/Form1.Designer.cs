@@ -130,7 +130,6 @@
             this.tbRFID.Name = "tbRFID";
             this.tbRFID.Size = new System.Drawing.Size(124, 20);
             this.tbRFID.TabIndex = 10;
-            this.tbRFID.Text = "works";
             // 
             // lbId
             // 

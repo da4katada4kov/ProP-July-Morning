@@ -22,7 +22,7 @@ namespace PayPal_log_file_converter
 
             connection = new MySqlConnection(connectionInfo);
         }
-
+        // adds all transactions from the log file to the transactions table
         public bool AddLogToDatabase(int transactionid, double amount, DateTime enddate, int visitorid)
         {
 
@@ -41,15 +41,12 @@ namespace PayPal_log_file_converter
             }
             catch (MySqlException exc)
             {
-                //MessageBox.Show("Log file has already been processed!");
                 return false;
             }
             finally
             {
                 connection.Close();
             }
-            
         }
-
     }
 }

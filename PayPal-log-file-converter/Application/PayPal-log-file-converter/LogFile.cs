@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PayPal_log_file_converter
 {
-    class LogFile
+    public class LogFile
     {
         public int OrganizationBankAccount { get; set; }
         public DateTime StartDate { get; set; }

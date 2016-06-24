@@ -27,8 +27,7 @@ namespace ChipSetApp
 
 
         //Method that searches if there is such a user in the database Returns true or false
-        public bool CheckUser(int idIn,string Fname,string Lname,string Email )
-
+        public bool CheckUser(int idIn, string Fname, string Lname, string Email)
         {
             String sql = "SELECT * FROM visitor";
             MySqlCommand command = new MySqlCommand(sql, connection);
@@ -37,13 +36,13 @@ namespace ChipSetApp
             {
                 connection.Open();
                 MySqlDataReader reader = command.ExecuteReader();
-                
+
                 while (reader.Read())
                 {
-                    if (idIn==Convert.ToInt32(reader[0])&& Fname == Convert.ToString(reader[1])&&Lname ==
-                        Convert.ToString(reader[2])&&Email == Convert.ToString(reader[5]))
+                    if (idIn == Convert.ToInt32(reader[0]) && Fname == Convert.ToString(reader[1]) && Lname ==
+                        Convert.ToString(reader[2]) && Email == Convert.ToString(reader[5]))
                     {
-                       this.id = Convert.ToInt32(reader[0]);
+                        this.id = Convert.ToInt32(reader[0]);
                         return true;
                     }
 
@@ -52,7 +51,7 @@ namespace ChipSetApp
             }
             catch
             {
-                MessageBox.Show("error while loading from the database..");
+                MessageBox.Show("Error while loading from the database..");
             }
             finally
             {
@@ -64,7 +63,7 @@ namespace ChipSetApp
 
 
         //A method whitch Assignes the RFID to the user which has the input ID
-        private void assignMethod(string rfid,int idin)
+        private void AssignRFID(string rfid, int idin)
         {
             string query = "UPDATE `dbi339805`.`visitor` SET `RFID` = '" + rfid + "', `Active` = 1 WHERE `VisitorID` = '" + idin + "';";
             MySqlCommand command = new MySqlCommand(query, connection);
@@ -77,7 +76,6 @@ namespace ChipSetApp
             }
             catch (Exception exc)
             {
-
                 MessageBox.Show(exc.Message);
             }
 
@@ -88,7 +86,7 @@ namespace ChipSetApp
         }
 
         //Public method which decides if the user has the permission to call the assignMethod()
-        public void RFIDgiver(int idin,string Fname, string Lname, string Email, string RFID)
+        public void RFIDgiver(int idin, string Fname, string Lname, string Email, string RFID)
         {
     
             String sql = "SELECT * FROM visitor";
@@ -103,25 +101,27 @@ namespace ChipSetApp
                 //int id;
                 string email ;
                 string Lastname;
-                
+                string rfid;
                 
                 while (search.Read())
                 {
                     
-
                     name=Convert.ToString(search[1]);
                     Lastname  = Convert.ToString(search[2]);
                     email =Convert.ToString(search[5]);
-                    //Series of checks to find if the user exists
-                   if (Fname==name && Lname==Lastname && email==Email && id==idin)
-                   {
-                       search.Close();
-                       connection.Close();
-                       assignMethod(RFID, idin);
-                       break;
+                    rfid = Convert.ToString(search[8]);
+                    if(DBNull.Value.Equals(search[8]))
+                    {
+                        //Series of checks to find if the user exists
+                        if (Fname==name && Lname==Lastname && email==Email && id==idin)
+                        {
+                           search.Close();
+                           connection.Close();
+                           AssignRFID(RFID, idin);
+                           break;
                          
-                   }
-                   
+                        }
+                    } 
                 }
 	        }
 	
@@ -133,13 +133,10 @@ namespace ChipSetApp
             {
                 connection.Close();
             }
-             
-  
-
         }
+        
 
-
-        }
     }
+}
 
 

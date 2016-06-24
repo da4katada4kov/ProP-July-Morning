@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace PayPal_log_file_converter
 {
-    class Deposit
+    public class Deposit
     {
-        public int IdNr { get; set; }
-        public double Amount { get; set; }
+        public int IdNr { get; set; } // respectively TransactionID in `transactions`
+        public double Amount { get; set; } // // respectively AmountDeposited in `transactions`
         public int VisitorID { get; set; }
 
         public Deposit(int id, double amount, int visitorid)

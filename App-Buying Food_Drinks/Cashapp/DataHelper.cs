@@ -23,7 +23,7 @@ namespace Cashapp
 
             connection = new MySqlConnection(connectionInfo);
         }
-       
+    //returns the purchase id of the last purchase a specified visitor has made   
         public int GetPurchaseID(int visitorid)
         {
             String sql = "SELECT PurchaseID FROM purchase WHERE Timestamp = @timestamp";
@@ -48,6 +48,10 @@ namespace Cashapp
             }
             
         }
+        //1. add a new purchase with a visitor id and a total
+        //2. inserts all products and quantities into purchase_has_product
+        //3. updates the quantity of the products in the product table
+        //4. updates the balance of the visitor
         public void AddProduct_PurchaseToDB(string rfid, List<Product> products, double ordertotal)
         {
             String sql = "INSERT INTO purchase(SHOP_ShopID, VISITOR_VisitorID,Total) VALUES (@shopid, @visitorid,@total)";           
@@ -88,6 +92,7 @@ namespace Cashapp
             }
 
         }
+        //updates the balance of the visitor by substracting the total of the order
         private void UpdateVisitorBalance(int visitorid, double ordertotal)
         {
             String sql = "UPDATE `visitor` SET `Balance`=`Balance`- @total WHERE `VisitorID`= @visitorid;";
@@ -104,9 +109,9 @@ namespace Cashapp
 
             }
         }
+        // returns the di of a visittor with a specified rfid, after he/ she has scanned it 
         public int GetvisitorID(string rfid)
         {
-            //PROBLEM MAICHE
             int visitorid;
             String sql = "SELECT VisitorID FROM visitor WHERE RFID = @rfid;";
             MySqlCommand command = new MySqlCommand(sql, connection);
@@ -129,6 +134,7 @@ namespace Cashapp
             }
 
         }
+        //updates the quantity of a product by substracting the quantity bought
         public void UpdateProductQuantity(int productid, int quantitybought)
         {
             String sql = "UPDATE `shop_has_product` SET `QuantityAvailable`= `QuantityAvailable` - @quantitybought WHERE `PRODUCT_ProductID`= @productid;";
