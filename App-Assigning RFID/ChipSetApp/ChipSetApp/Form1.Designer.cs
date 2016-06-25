@@ -70,40 +70,44 @@
             // labelFirstName
             // 
             this.labelFirstName.AutoSize = true;
-            this.labelFirstName.BackColor = System.Drawing.SystemColors.GrayText;
-            this.labelFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelFirstName.BackColor = System.Drawing.Color.Transparent;
+            this.labelFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.labelFirstName.ForeColor = System.Drawing.Color.White;
             this.labelFirstName.Location = new System.Drawing.Point(8, 16);
             this.labelFirstName.Name = "labelFirstName";
-            this.labelFirstName.Size = new System.Drawing.Size(90, 20);
+            this.labelFirstName.Size = new System.Drawing.Size(101, 20);
             this.labelFirstName.TabIndex = 5;
             this.labelFirstName.Text = "First Name:";
             // 
             // labelLastname
             // 
             this.labelLastname.AutoSize = true;
-            this.labelLastname.BackColor = System.Drawing.SystemColors.GrayText;
-            this.labelLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelLastname.BackColor = System.Drawing.Color.Transparent;
+            this.labelLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.labelLastname.ForeColor = System.Drawing.Color.White;
             this.labelLastname.Location = new System.Drawing.Point(7, 44);
             this.labelLastname.Name = "labelLastname";
-            this.labelLastname.Size = new System.Drawing.Size(90, 20);
+            this.labelLastname.Size = new System.Drawing.Size(100, 20);
             this.labelLastname.TabIndex = 6;
             this.labelLastname.Text = "Last Name:";
             // 
             // labelMail
             // 
             this.labelMail.AutoSize = true;
-            this.labelMail.BackColor = System.Drawing.SystemColors.GrayText;
-            this.labelMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelMail.BackColor = System.Drawing.Color.Transparent;
+            this.labelMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.labelMail.ForeColor = System.Drawing.Color.White;
             this.labelMail.Location = new System.Drawing.Point(36, 72);
             this.labelMail.Name = "labelMail";
-            this.labelMail.Size = new System.Drawing.Size(61, 20);
+            this.labelMail.Size = new System.Drawing.Size(69, 20);
             this.labelMail.TabIndex = 7;
             this.labelMail.Text = "E-mail: ";
             // 
             // btnCheck
             // 
-            this.btnCheck.BackColor = System.Drawing.SystemColors.GrayText;
-            this.btnCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheck.BackColor = System.Drawing.Color.GreenYellow;
+            this.btnCheck.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheck.Location = new System.Drawing.Point(116, 138);
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(124, 48);
@@ -115,11 +119,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.GrayText;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(45, 203);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 20);
+            this.label2.Size = new System.Drawing.Size(57, 20);
             this.label2.TabIndex = 11;
             this.label2.Text = "RFID:";
             // 
@@ -134,11 +139,12 @@
             // lbId
             // 
             this.lbId.AutoSize = true;
-            this.lbId.BackColor = System.Drawing.SystemColors.GrayText;
-            this.lbId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbId.BackColor = System.Drawing.Color.Transparent;
+            this.lbId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lbId.ForeColor = System.Drawing.Color.White;
             this.lbId.Location = new System.Drawing.Point(67, 101);
             this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(30, 20);
+            this.lbId.Size = new System.Drawing.Size(33, 20);
             this.lbId.TabIndex = 13;
             this.lbId.Text = "ID:";
             // 
@@ -155,9 +161,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.BackColor = System.Drawing.Color.DarkOrange;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(268, 271);
+            this.ClientSize = new System.Drawing.Size(268, 251);
             this.Controls.Add(this.lbId);
             this.Controls.Add(this.tbId);
             this.Controls.Add(this.label2);

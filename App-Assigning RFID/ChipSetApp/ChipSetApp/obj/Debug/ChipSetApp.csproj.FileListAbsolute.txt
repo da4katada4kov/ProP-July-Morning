@@ -59,3 +59,10 @@ D:\ICT\block4\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\bin\Deb
 D:\ICT\block4\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\bin\Debug\ChipSetApp.pdb
 D:\ICT\block4\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
 D:\ICT\block4\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\bin\Debug\Phidget21.NET.2.1.8.19.Fakes.xml
+D:\Files\Fontys\Project P\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\bin\Debug\ChipSetApp.exe
+D:\Files\Fontys\Project P\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\bin\Debug\ChipSetApp.pdb
+D:\Files\Fontys\Project P\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\bin\Debug\Phidget21.NET.2.1.8.19.Fakes.xml
+D:\Files\Fontys\Project P\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.csprojResolveAssemblyReference.cache
+D:\Files\Fontys\Project P\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.Form1.resources
+D:\Files\Fontys\Project P\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.Properties.Resources.resources
+D:\Files\Fontys\Project P\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.csproj.GenerateResource.Cache
