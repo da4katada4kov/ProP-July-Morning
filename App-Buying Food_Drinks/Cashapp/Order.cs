@@ -8,16 +8,16 @@ namespace Cashapp
 {
     public class Order
     {
-        public int OrderID { get; set; }
-        public List<Product> productlist { get; set; }
-        public double Total { get; set; }
+        public static int OrderID = 0;
+        public List<Product> productlist { get; set; } //list of products a visitor has ordered
+        public double Total { get; set; } //total saldo of purchase
 
         public Order()
         {
             OrderID++;
             productlist = new List<Product>();
         }
-
+        //adds a product to the order
         public bool AddProduct(Product p)
         {
             bool x = true;
@@ -28,16 +28,18 @@ namespace Cashapp
             }
             if (x == false)
             {
-                GetProduct(p).Quantity += 1;
+                GetProduct(p).QuantityBought += 1;
             }
             else
             {
                 productlist.Add(p);
-                p.Quantity += 1;
+                p.QuantityBought += 1;
             }
             return x;
             
         }
+
+        //searches for a product in the list
         public Product GetProduct(Product toGet)
         {
             Product p = null;

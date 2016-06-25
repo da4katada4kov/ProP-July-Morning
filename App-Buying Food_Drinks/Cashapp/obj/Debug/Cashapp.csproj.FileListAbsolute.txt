@@ -67,3 +67,21 @@ D:\ICT\block4\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\obj\Debug\Cashapp
 D:\Files\Fontys\Project P\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\bin\Debug\Cashapp.exe.config
 D:\Files\Fontys\Project P\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\obj\Debug\Cashapp.exe
 D:\Files\Fontys\Project P\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\obj\Debug\Cashapp.pdb
+D:\JulyGit\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\bin\Debug\Cashapp.exe.config
+D:\JulyGit\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\obj\Debug\Cashapp.exe
+D:\JulyGit\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\obj\Debug\Cashapp.pdb
+D:\JulyGit\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\bin\Debug\Cashapp.exe
+D:\JulyGit\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\bin\Debug\Cashapp.pdb
+D:\JulyGit\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\obj\Debug\Cashapp.csprojResolveAssemblyReference.cache
+D:\JulyGit\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\obj\Debug\Cashapp.Form1.resources
+D:\JulyGit\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\obj\Debug\Cashapp.Properties.Resources.resources
+D:\JulyGit\ProP-July-Morning\App-Buying Food_Drinks\Cashapp\obj\Debug\Cashapp.csproj.GenerateResource.Cache
+D:\ICT\block4\prop\Applications\applicaton for shop\App-Buying Food_Drinks\Cashapp\bin\Debug\Cashapp.exe.config
+D:\ICT\block4\prop\Applications\applicaton for shop\App-Buying Food_Drinks\Cashapp\obj\Debug\Cashapp.exe
+D:\ICT\block4\prop\Applications\applicaton for shop\App-Buying Food_Drinks\Cashapp\obj\Debug\Cashapp.pdb
+D:\ICT\block4\prop\Applications\applicaton for shop\App-Buying Food_Drinks\Cashapp\bin\Debug\Cashapp.exe
+D:\ICT\block4\prop\Applications\applicaton for shop\App-Buying Food_Drinks\Cashapp\bin\Debug\Cashapp.pdb
+D:\ICT\block4\prop\Applications\applicaton for shop\App-Buying Food_Drinks\Cashapp\obj\Debug\Cashapp.csprojResolveAssemblyReference.cache
+D:\ICT\block4\prop\Applications\applicaton for shop\App-Buying Food_Drinks\Cashapp\obj\Debug\Cashapp.Properties.Resources.resources
+D:\ICT\block4\prop\Applications\applicaton for shop\App-Buying Food_Drinks\Cashapp\obj\Debug\Cashapp.csproj.GenerateResource.Cache
+D:\ICT\block4\prop\Applications\applicaton for shop\App-Buying Food_Drinks\Cashapp\obj\Debug\Cashapp.ShopApp.resources

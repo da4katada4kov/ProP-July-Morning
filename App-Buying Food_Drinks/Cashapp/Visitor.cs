@@ -2,6 +2,7 @@
 using Phidgets.Events;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,7 @@ namespace Cashapp
             try
             {
                 myRFIDReader = new RFID();               
-                myRFIDReader.Tag += new TagEventHandler(SayHello);
+                myRFIDReader.Tag += new TagEventHandler(ProcessOrder);
             }
             catch (PhidgetException)
             {
@@ -48,17 +49,49 @@ namespace Cashapp
             myRFIDReader.Antenna = false;
             myRFIDReader.close();
         }
-
-        public void SayHello(object sender, TagEventArgs e)
+        // processes the order and calls the method for generating a sales receipt
+        public void ProcessOrder(object sender, TagEventArgs e)
         {
-            dh.AddProduct_PurchaseToDB(e.Tag, order.productlist, order.Total);
-            DialogResult dialogResult =MessageBox.Show("Hello visitor with rfid-nr " + e.Tag +
-                ".\nYour order has been processed!");
+            if (dh.AddProduct_PurchaseToDB(e.Tag, order.productlist, order.Total))
+            {
+                MessageBox.Show("Your order has been processed!");
+                SaveReceipt(order.productlist);
+            }
 
-                //Close();
-                dh.connection.Close();
+            dh.connection.Close();  
+        }
 
-                
+        //generate a sales receipt and appends it to a log file
+        private void SaveReceipt(List<Product> products)
+        {
+            FileStream fs = null;
+            StreamWriter sr = null;
+            try
+            {
+                fs = new FileStream("receipts.txt", FileMode.Append, FileAccess.Write);
+                sr = new StreamWriter(fs);
+                sr.WriteLine(DateTime.Now.ToString());
+                foreach (Product i in products)
+                {
+                    sr.WriteLine(i.ToString() + " x " + i.PricePerOne.ToString() + "€");
+                }
+                sr.WriteLine("Total: " + order.Total.ToString());
+                sr.WriteLine("---------------------------------");
+
+
+
+            }
+            catch (IOException exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                if (sr != null)
+                    sr.Close();
+                if (fs != null)
+                    fs.Close();
+            }
         }
     }
 }

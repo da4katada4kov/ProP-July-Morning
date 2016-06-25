@@ -52,8 +52,9 @@ namespace Cashapp
         //2. inserts all products and quantities into purchase_has_product
         //3. updates the quantity of the products in the product table
         //4. updates the balance of the visitor
-        public void AddProduct_PurchaseToDB(string rfid, List<Product> products, double ordertotal)
+        public bool AddProduct_PurchaseToDB(string rfid, List<Product> products, double ordertotal)
         {
+            
             String sql = "INSERT INTO purchase(SHOP_ShopID, VISITOR_VisitorID,Total) VALUES (@shopid, @visitorid,@total)";           
             MySqlCommand command = new MySqlCommand(sql, connection);
             int visitorid = GetvisitorID(rfid);
@@ -74,17 +75,19 @@ namespace Cashapp
                     MySqlCommand command1 = new MySqlCommand(sql1, connection);
                     command1.Parameters.AddWithValue("@purchaseid", purchaseid);
                     command1.Parameters.AddWithValue("@productid", i.ProductID);
-                    command1.Parameters.AddWithValue("@quantity", i.Quantity);
+                    command1.Parameters.AddWithValue("@quantity", i.QuantityBought);
 
                     command1.ExecuteNonQuery();
-                    UpdateProductQuantity(i.ProductID, i.Quantity);
+                    UpdateProductQuantity(i.ProductID, i.QuantityBought);
                 }
-                UpdateVisitorBalance(visitorid, ordertotal);
+                if (UpdateVisitorBalance(visitorid, ordertotal))
+                    return true;
+                else return false;
             }
             catch (Exception exc)
             {
                 MessageBox.Show(exc.Message);
-
+                return false;
             }
             finally
             {
@@ -93,22 +96,38 @@ namespace Cashapp
 
         }
         //updates the balance of the visitor by substracting the total of the order
-        private void UpdateVisitorBalance(int visitorid, double ordertotal)
+        private bool UpdateVisitorBalance(int visitorid, double ordertotal)
         {
             String sql = "UPDATE `visitor` SET `Balance`=`Balance`- @total WHERE `VisitorID`= @visitorid;";
             MySqlCommand command = new MySqlCommand(sql, connection);
             command.Parameters.AddWithValue("@total", ordertotal);
             command.Parameters.AddWithValue("@visitorid", visitorid);
+            String sql1 = "Select Balance from visitor WHERE VisitorID = @visitorid";
+            MySqlCommand command1 = new MySqlCommand(sql1, connection);
+            command1.Parameters.AddWithValue("@visitorid", visitorid);
             try
             {
-                command.ExecuteNonQuery();
+                double balance = (double)command1.ExecuteScalar();
+                if (balance >= ordertotal)
+                {
+                    command.ExecuteNonQuery();
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Insufficient balance");
+                    return false;
+                }
             }
             catch (Exception exc)
             {
+                
                 MessageBox.Show(exc.Message);
-
+                return false;
             }
+            
         }
+        
         // returns the di of a visittor with a specified rfid, after he/ she has scanned it 
         public int GetvisitorID(string rfid)
         {
