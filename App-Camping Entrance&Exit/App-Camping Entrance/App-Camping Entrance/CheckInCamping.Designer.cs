@@ -28,18 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckInCamping));
             this.buttonCheckIn = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // buttonCheckIn
             // 
-            this.buttonCheckIn.Location = new System.Drawing.Point(25, 83);
+            this.buttonCheckIn.BackColor = System.Drawing.Color.GreenYellow;
+            this.buttonCheckIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCheckIn.Location = new System.Drawing.Point(12, 12);
             this.buttonCheckIn.Name = "buttonCheckIn";
-            this.buttonCheckIn.Size = new System.Drawing.Size(127, 76);
+            this.buttonCheckIn.Size = new System.Drawing.Size(161, 89);
             this.buttonCheckIn.TabIndex = 0;
             this.buttonCheckIn.Text = "Check In";
-            this.buttonCheckIn.UseVisualStyleBackColor = true;
+            this.buttonCheckIn.UseVisualStyleBackColor = false;
             this.buttonCheckIn.Click += new System.EventHandler(this.buttonCheckIn_Click);
             // 
             // listBox1
@@ -55,6 +58,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(384, 260);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.buttonCheckIn);

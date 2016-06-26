@@ -84,3 +84,6 @@ D:\Files\Fontys\Project P\ProP-July-Morning\App-Lending Stuff\RentApp\obj\Debug\
 D:\ICT\block4\ProP-July-Morning\App-Lending Stuff\RentApp\obj\Debug\Cashapp.Rent.resources
 D:\ICT\block4\ProP-July-Morning\App-Lending Stuff\RentApp\obj\Debug\Cashapp.LoaningStand.resources
 D:\ICT\block4\ProP-July-Morning\App-Lending Stuff\RentApp\obj\Debug\Cashapp.Return.resources
+D:\Files\Fontys\Project P\ProP-Git\ProP-July-Morning\App-Lending Stuff\RentApp\bin\Debug\Cashapp.exe.config
+D:\Files\Fontys\Project P\ProP-Git\ProP-July-Morning\App-Lending Stuff\RentApp\obj\Debug\Cashapp.exe
+D:\Files\Fontys\Project P\ProP-Git\ProP-July-Morning\App-Lending Stuff\RentApp\obj\Debug\Cashapp.pdb
