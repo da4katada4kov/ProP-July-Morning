@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Return));
             this.buttonReturnAll = new System.Windows.Forms.Button();
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -40,12 +41,14 @@
             // 
             // buttonReturnAll
             // 
-            this.buttonReturnAll.Location = new System.Drawing.Point(28, 32);
+            this.buttonReturnAll.BackColor = System.Drawing.Color.Gold;
+            this.buttonReturnAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonReturnAll.Location = new System.Drawing.Point(12, 12);
             this.buttonReturnAll.Name = "buttonReturnAll";
-            this.buttonReturnAll.Size = new System.Drawing.Size(133, 71);
+            this.buttonReturnAll.Size = new System.Drawing.Size(162, 81);
             this.buttonReturnAll.TabIndex = 0;
             this.buttonReturnAll.Text = "Return All";
-            this.buttonReturnAll.UseVisualStyleBackColor = true;
+            this.buttonReturnAll.UseVisualStyleBackColor = false;
             this.buttonReturnAll.Click += new System.EventHandler(this.buttonReturnAll_Click);
             // 
             // toolTip2
@@ -55,36 +58,41 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(215, 31);
+            this.listBox1.Location = new System.Drawing.Point(180, 12);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(261, 251);
+            this.listBox1.Size = new System.Drawing.Size(322, 264);
             this.listBox1.TabIndex = 1;
             // 
             // buttonReturnOne
             // 
-            this.buttonReturnOne.Location = new System.Drawing.Point(28, 120);
+            this.buttonReturnOne.BackColor = System.Drawing.Color.GreenYellow;
+            this.buttonReturnOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonReturnOne.Location = new System.Drawing.Point(12, 99);
             this.buttonReturnOne.Name = "buttonReturnOne";
-            this.buttonReturnOne.Size = new System.Drawing.Size(133, 69);
+            this.buttonReturnOne.Size = new System.Drawing.Size(162, 87);
             this.buttonReturnOne.TabIndex = 2;
             this.buttonReturnOne.Text = "Return Selected";
-            this.buttonReturnOne.UseVisualStyleBackColor = true;
+            this.buttonReturnOne.UseVisualStyleBackColor = false;
             this.buttonReturnOne.Click += new System.EventHandler(this.buttonReturnOne_Click);
             // 
             // buttonIdentifyVisitor
             // 
-            this.buttonIdentifyVisitor.Location = new System.Drawing.Point(28, 215);
+            this.buttonIdentifyVisitor.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.buttonIdentifyVisitor.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonIdentifyVisitor.Location = new System.Drawing.Point(12, 192);
             this.buttonIdentifyVisitor.Name = "buttonIdentifyVisitor";
-            this.buttonIdentifyVisitor.Size = new System.Drawing.Size(133, 67);
+            this.buttonIdentifyVisitor.Size = new System.Drawing.Size(162, 82);
             this.buttonIdentifyVisitor.TabIndex = 3;
             this.buttonIdentifyVisitor.Text = "Get rented equipment";
-            this.buttonIdentifyVisitor.UseVisualStyleBackColor = true;
+            this.buttonIdentifyVisitor.UseVisualStyleBackColor = false;
             this.buttonIdentifyVisitor.Click += new System.EventHandler(this.buttonIdentifyVisitor_Click);
             // 
             // Return
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 325);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(514, 284);
             this.Controls.Add(this.buttonIdentifyVisitor);
             this.Controls.Add(this.buttonReturnOne);
             this.Controls.Add(this.listBox1);

@@ -37,12 +37,12 @@
             // 
             // btnCheckIn
             // 
-            this.btnCheckIn.BackColor = System.Drawing.SystemColors.GrayText;
-            this.btnCheckIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckIn.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCheckIn.Location = new System.Drawing.Point(141, 21);
+            this.btnCheckIn.BackColor = System.Drawing.Color.Gold;
+            this.btnCheckIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckIn.ForeColor = System.Drawing.Color.Black;
+            this.btnCheckIn.Location = new System.Drawing.Point(12, 12);
             this.btnCheckIn.Name = "btnCheckIn";
-            this.btnCheckIn.Size = new System.Drawing.Size(166, 76);
+            this.btnCheckIn.Size = new System.Drawing.Size(242, 88);
             this.btnCheckIn.TabIndex = 10;
             this.btnCheckIn.Text = "Check In";
             this.btnCheckIn.UseVisualStyleBackColor = false;
@@ -50,12 +50,12 @@
             // 
             // buttonBuyTicket
             // 
-            this.buttonBuyTicket.BackColor = System.Drawing.SystemColors.GrayText;
-            this.buttonBuyTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuyTicket.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonBuyTicket.Location = new System.Drawing.Point(141, 184);
+            this.buttonBuyTicket.BackColor = System.Drawing.Color.GreenYellow;
+            this.buttonBuyTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuyTicket.ForeColor = System.Drawing.Color.Black;
+            this.buttonBuyTicket.Location = new System.Drawing.Point(12, 195);
             this.buttonBuyTicket.Name = "buttonBuyTicket";
-            this.buttonBuyTicket.Size = new System.Drawing.Size(166, 76);
+            this.buttonBuyTicket.Size = new System.Drawing.Size(242, 91);
             this.buttonBuyTicket.TabIndex = 11;
             this.buttonBuyTicket.Text = "Buy Ticket";
             this.buttonBuyTicket.UseVisualStyleBackColor = false;
@@ -67,17 +67,18 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(30, 126);
+            this.label1.Location = new System.Drawing.Point(31, 121);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(385, 24);
+            this.label1.Size = new System.Drawing.Size(198, 48);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Don\'t have a ticket? You can buy it here!";
+            this.label1.Text = "Don\'t have a ticket? \r\nYou can buy it here!";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // splitter1
             // 
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 272);
+            this.splitter1.Size = new System.Drawing.Size(3, 298);
             this.splitter1.TabIndex = 13;
             this.splitter1.TabStop = false;
             // 
@@ -86,7 +87,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(439, 272);
+            this.ClientSize = new System.Drawing.Size(266, 298);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonBuyTicket);
