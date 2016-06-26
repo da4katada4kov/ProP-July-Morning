@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace app_for_status_of_event
 {
-    public partial class Form1 : Form
+    public partial class Status : Form
     {
-        public Form1()
+        public Status()
         {
             InitializeComponent();
         }

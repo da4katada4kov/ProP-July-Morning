@@ -58,6 +58,7 @@
             this.textBoxProductName.Name = "textBoxProductName";
             this.textBoxProductName.Size = new System.Drawing.Size(200, 30);
             this.textBoxProductName.TabIndex = 8;
+            this.textBoxProductName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxProductName_KeyPress);
             // 
             // label2
             // 
@@ -111,7 +112,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ShopStatus";
-            this.Text = "ShopStatus";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Shop Status";
             this.ResumeLayout(false);
             this.PerformLayout();
 

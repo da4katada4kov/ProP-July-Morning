@@ -34,5 +34,67 @@ namespace app_for_status_of_event
             return 15 - occupied;
         }
 
+        public int GetNrOfPeopleAtCamping()
+        {
+            String sql = "SELECT COUNT(*) FROM visitor WHERE Entered = 'true'";
+            MySqlCommand command = new MySqlCommand(sql, dh.connection);
+            int nr=0;
+            try
+            {
+                dh.connection.Open();
+                nr = Convert.ToInt32(command.ExecuteScalar());
+
+            }
+            catch (MySqlException exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                dh.connection.Close();
+            }
+            return nr;
+        }
+        public int GetNrOfActiveSpots()
+        {
+            String sql = "SELECT COUNT(*) FROM booking WHERE Entered ='true'";
+            MySqlCommand command = new MySqlCommand(sql, dh.connection);
+            int nr = 0;
+            try
+            {
+                dh.connection.Open();
+                nr = Convert.ToInt32(command.ExecuteScalar());
+            }
+            catch (MySqlException exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                dh.connection.Close();
+            }
+            return nr;
+        }
+
+        public int GetNrOfNonActiveSpots()
+        {
+            String sql = "SELECT COUNT(*) FROM booking WHERE Entered ='false'";
+            MySqlCommand command = new MySqlCommand(sql, dh.connection);
+            int nr = 0;
+            try
+            {
+                dh.connection.Open();
+                nr = Convert.ToInt32(command.ExecuteScalar());
+            }
+            catch (MySqlException exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                dh.connection.Close();
+            }
+            return nr;
+        }
     }
 }

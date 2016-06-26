@@ -33,6 +33,7 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.buttonNrOfFreeSpots = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.buttonNrOfPeopleAtCamping = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
@@ -49,12 +50,25 @@
             this.buttonNrOfFreeSpots.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonNrOfFreeSpots.Location = new System.Drawing.Point(5, 12);
             this.buttonNrOfFreeSpots.Name = "buttonNrOfFreeSpots";
-            this.buttonNrOfFreeSpots.Size = new System.Drawing.Size(164, 82);
+            this.buttonNrOfFreeSpots.Size = new System.Drawing.Size(164, 91);
             this.buttonNrOfFreeSpots.TabIndex = 1;
             this.buttonNrOfFreeSpots.Text = "Available spots";
             this.toolTip1.SetToolTip(this.buttonNrOfFreeSpots, "Display the count of available camping spots.");
             this.buttonNrOfFreeSpots.UseVisualStyleBackColor = false;
             this.buttonNrOfFreeSpots.Click += new System.EventHandler(this.buttonNrOfFreeSpots_Click);
+            // 
+            // buttonNrOfPeopleAtCamping
+            // 
+            this.buttonNrOfPeopleAtCamping.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.buttonNrOfPeopleAtCamping.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonNrOfPeopleAtCamping.Location = new System.Drawing.Point(5, 120);
+            this.buttonNrOfPeopleAtCamping.Name = "buttonNrOfPeopleAtCamping";
+            this.buttonNrOfPeopleAtCamping.Size = new System.Drawing.Size(164, 91);
+            this.buttonNrOfPeopleAtCamping.TabIndex = 2;
+            this.buttonNrOfPeopleAtCamping.Text = "People at camping";
+            this.toolTip1.SetToolTip(this.buttonNrOfPeopleAtCamping, "Display the count of available camping spots.");
+            this.buttonNrOfPeopleAtCamping.UseVisualStyleBackColor = false;
+            this.buttonNrOfPeopleAtCamping.Click += new System.EventHandler(this.buttonNrOfPeopleAtCamping_Click);
             // 
             // CampingStatus
             // 
@@ -62,12 +76,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(392, 219);
+            this.Controls.Add(this.buttonNrOfPeopleAtCamping);
             this.Controls.Add(this.buttonNrOfFreeSpots);
             this.Controls.Add(this.listBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CampingStatus";
-            this.Text = "CampingStatus";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Camping Status";
             this.ResumeLayout(false);
 
         }
@@ -77,5 +93,6 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button buttonNrOfFreeSpots;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button buttonNrOfPeopleAtCamping;
     }
 }

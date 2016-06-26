@@ -1,6 +1,6 @@
 ﻿namespace app_for_status_of_event
 {
-    partial class Form1
+    partial class Status
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Status));
             this.buttonStatusVisitor = new System.Windows.Forms.Button();
             this.buttonStatusEvent = new System.Windows.Forms.Button();
             this.buttonStatusCamping = new System.Windows.Forms.Button();
@@ -83,13 +83,13 @@
             this.buttonStatusShop.UseVisualStyleBackColor = false;
             this.buttonStatusShop.Click += new System.EventHandler(this.buttonStatusShop_Click);
             // 
-            // Form1
+            // Status
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(358, 244);
+            this.ClientSize = new System.Drawing.Size(358, 243);
             this.Controls.Add(this.buttonStatusShop);
             this.Controls.Add(this.buttonStatusCamping);
             this.Controls.Add(this.buttonStatusEvent);
@@ -97,8 +97,9 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
-            this.Text = "Status";
+            this.Name = "Status";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Inspect System Status";
             this.ResumeLayout(false);
 
         }

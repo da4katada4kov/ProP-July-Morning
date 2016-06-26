@@ -16,7 +16,7 @@ namespace app_for_status_of_event
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Status());
         }
     }
 }

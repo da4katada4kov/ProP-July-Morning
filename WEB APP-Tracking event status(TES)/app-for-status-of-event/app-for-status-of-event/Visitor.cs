@@ -150,26 +150,35 @@ namespace app_for_status_of_event
         {
             /*1. select sum(total) from  purchase*/
             string total;
-            double totalonfood;
+            double totalonfood=0;
             String sql = "SELECT SUM(Total) FROM purchase WHERE VISITOR_VisitorID = '" + visitorid + "';";
             MySqlCommand command = new MySqlCommand(sql, dh.connection);
             try
             {
                 dh.connection.Open();
-                total = command.ExecuteScalar().ToString();
-                totalonfood = Convert.ToDouble(total);
-
-                return totalonfood;
+                //total = command.ExecuteScalar().ToString();
+                //if(total!=null)
+                //    totalonfood = Convert.ToDouble(total);
+                //if (totalonfood > 0)
+                //    return totalonfood;
+                //else
+                //    return 0;
+                MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    if(!DBNull.Value.Equals(reader[0]))
+                        totalonfood = Convert.ToDouble(reader[0]);
+                }
             }
             catch (MySqlException exc)
             {
                 MessageBox.Show(exc.Message);
-                return -1;
             }
             finally
             {
                 dh.connection.Close();
             }
+            return totalonfood;
         }
         public double GetTotalBalance()
         {
@@ -239,6 +248,58 @@ namespace app_for_status_of_event
             {
                 dh.connection.Close();
             }
+        }
+
+        private List<int> GetRentedEquipmentIds()
+        {
+            List<int> equipmentIds = new List<int>();
+            String sql = "SELECT EQUIPMENT_EquipmentID FROM rent_equipment";
+            MySqlCommand command = new MySqlCommand(sql, dh.connection);
+            try
+            {
+                dh.connection.Open();
+                MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    equipmentIds.Add(Convert.ToInt32(reader[0]));
+                }
+            }
+            catch (MySqlException exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                dh.connection.Close();
+            }
+            return equipmentIds;
+        }
+        public double GetTotalMoneySpentOnEquipment()
+        {
+            double total = 0;
+            double result = 0;
+            try
+            {
+                List<int> ids = GetRentedEquipmentIds();
+                dh.connection.Open();
+                foreach (int i in ids)
+                {
+                    String sql = "SELECT RentPrice FROM equipment WHERE EquipmentID = " + i;
+                    MySqlCommand command = new MySqlCommand(sql, dh.connection);
+                    result = (double)command.ExecuteScalar();
+                    total += result;
+                }
+
+            }
+            catch (MySqlException exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                dh.connection.Close();
+            }
+            return total;
         }
     }
 

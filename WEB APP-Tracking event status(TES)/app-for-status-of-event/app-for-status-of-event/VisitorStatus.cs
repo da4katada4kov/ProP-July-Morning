@@ -34,6 +34,8 @@ namespace app_for_status_of_event
 
             label3.Text = "Visitor id:";
             this.label3.Location = new System.Drawing.Point(115, 79);
+            this.label3.BackColor = Color.Transparent;
+            this.label3.ForeColor = Color.White;
 
             this.Controls.Add(tbstatus);
             this.Controls.Add(status);
@@ -95,7 +97,7 @@ namespace app_for_status_of_event
                 {
                     lb.Items.Add("ID: " + tbstatus.Text);
                     lb.Items.Add(vis.FirstName + " " + vis.LastName);
-                    lb.Items.Add("Balance: " + vis.Balance);
+                    lb.Items.Add("Balance: " + vis.Balance + " €");
                     if (vis.GuestOf != -1)
                     {
                         lb.Items.Add("At camping spot number: " + vis.GetCampingSpotId(vis));
@@ -115,11 +117,12 @@ namespace app_for_status_of_event
                 
             catch (FormatException)
             {
-                MessageBox.Show("Please enter a number.");
+                MessageBox.Show("Please enter a valid id!");
             }
         }
         private void GetVisitorHistory(object sender, EventArgs e)
         {
+            
             try
             {
                 lb.Items.Clear();
@@ -130,9 +133,9 @@ namespace app_for_status_of_event
                     double totalmoneyFromTransactions = v.GetTotalFromTransactions(visitorid);
                     double moneyonfood = v.GetMoneySpentOnFood(visitorid);
                     lb.Items.Add("Total money transfered:");
-                    lb.Items.Add(totalmoneyFromTransactions);
+                    lb.Items.Add(totalmoneyFromTransactions.ToString() + " €");
                     lb.Items.Add("Money spent on food:");
-                    lb.Items.Add(moneyonfood);
+                    lb.Items.Add(moneyonfood.ToString() + " €");
                 }
                 else
                 {
@@ -141,9 +144,9 @@ namespace app_for_status_of_event
                 
                 
             }
-            catch (FormatException exc)
+            catch (Exception exc)
             {
-                MessageBox.Show(exc.Message);
+                MessageBox.Show("Please enter a valid id!");
             }
         }
         private void GetTotalBalance(object sender, EventArgs e)
@@ -152,7 +155,7 @@ namespace app_for_status_of_event
             //{
                 lb.Items.Clear();
                 double total = v.GetTotalBalance();
-                lb.Items.Add("Total balance: " + total);
+                lb.Items.Add("Total balance: " + total + " €");
 
 
             //}
@@ -168,10 +171,13 @@ namespace app_for_status_of_event
                 lb.Items.Clear();
                 double onfood = v.GetTotalMoneySpentOnFood();
                 int ontickets = v.GetTotalMoneySpentOnTickets();
+                double onequipment = v.GetTotalMoneySpentOnEquipment();
 
-                lb.Items.Add("Money spent on: ");
-                lb.Items.Add("Tickets: " + ontickets);
-                lb.Items.Add("Food: " + onfood);
+                lb.Items.Add("Money spent on:");
+                lb.Items.Add("");
+                lb.Items.Add("Tickets: " + ontickets + " €");
+                lb.Items.Add("Food: " + onfood + " €");
+                lb.Items.Add("Equipment: " + onequipment + " €");
             //}
             //catch (Exception exc)
             //{
@@ -182,8 +188,7 @@ namespace app_for_status_of_event
         {
             RemoveControls();
 
-            //ShowListBox();
-
+            lb.Items.Clear();
             status = new Button();
             int widthOfAButton = 150, heightOfAButton = 60;
             status.Size = new System.Drawing.Size(widthOfAButton, heightOfAButton);
@@ -197,6 +202,8 @@ namespace app_for_status_of_event
 
             label3.Text = "Visitor id:";
             this.label3.Location = new System.Drawing.Point(115, 79);
+            this.label3.BackColor = Color.Transparent;
+            this.label3.ForeColor = Color.White;
 
             this.Controls.Add(tbstatus);
             this.Controls.Add(status);
@@ -207,8 +214,8 @@ namespace app_for_status_of_event
         private void visitorHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RemoveControls();
-            //ShowListBox();
-
+    
+            lb.Items.Clear();
             btnhistory = new Button();
             int widthOfAButton = 150, heightOfAButton = 60;
             btnhistory.Size = new System.Drawing.Size(widthOfAButton, heightOfAButton);
@@ -222,19 +229,24 @@ namespace app_for_status_of_event
 
             label3.Text = "Visitor id:";
             this.label3.Location = new System.Drawing.Point(115, 79);
+            this.label3.BackColor = Color.Transparent;
+            this.label3.ForeColor = Color.White;
 
             this.Controls.Add(tbhistory);
             this.Controls.Add(btnhistory);
             btnhistory.Click += GetVisitorHistory;
         }
 
+
         private void totalBalanceToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RemoveControls();
-            //ShowListBox();
 
+            lb.Items.Clear();
             label3.Text = "What is the total balance of all visitors?";
             this.label3.Location = new System.Drawing.Point(15, 100);
+            this.label3.BackColor = Color.Transparent;
+            this.label3.ForeColor = Color.White;
 
             btncalculate = new Button();
             int widthOfAButton = 150, heightOfAButton = 60;
@@ -252,9 +264,11 @@ namespace app_for_status_of_event
         {
             RemoveControls();
             //ShowListBox();
-
+            lb.Items.Clear();
             label3.Text = "How much money were spent in total?";
             this.label3.Location = new System.Drawing.Point(20, 100);
+            this.label3.BackColor = Color.Transparent;
+            this.label3.ForeColor = Color.White;
 
             btncalculate = new Button();
             int widthOfAButton = 150, heightOfAButton = 60;

@@ -23,13 +23,12 @@ namespace app_for_status_of_event
                 dh.connection.Open();
                 if (id != -1)
                 {
-                    string s = command.ExecuteScalar().ToString();
-                    quantity = Convert.ToInt32(s);
+                    quantity = Convert.ToInt32(command.ExecuteScalar());
 
                 }
                 else
                 {
-                   quantity = -1;
+                   quantity = 0;
                 }
             }
             catch (Exception exc)
