@@ -14,7 +14,7 @@ namespace App_Camping_Entrance
     {
         DataHelper dh = new DataHelper();
         public RFID myRFIDReader;
-        public string TagSerial;
+        public string TagSerial; //rfid nr
 
         public Visitor()
         {
@@ -91,6 +91,7 @@ namespace App_Camping_Entrance
             return x;
         }
 
+        //gets the id of a spot by the id of the main visitor
         public int GetSpotID(int mainID)
         {
             int spotID = -1;
@@ -112,6 +113,7 @@ namespace App_Camping_Entrance
             return spotID;
         }
 
+        //sets the visitor to enter in the camping
         private void assignMethod(int idin)
         {
             string query = "UPDATE `dbi339805`.`visitor` SET `Entered` = 'true' WHERE `VisitorID` = '" + idin + "';";
@@ -126,7 +128,7 @@ namespace App_Camping_Entrance
                 MessageBox.Show(exc.Message);
             }
         }
-
+        // sets the camping spot as active
         public void SpotEnter(int spotid, int mainid)
         {
             string query = "UPDATE `dbi339805`.`booking` SET `Entered` = 'true' WHERE `SpotId` = '" + spotid + "';";
@@ -148,7 +150,7 @@ namespace App_Camping_Entrance
                 dh.connection.Close();
             }
         }
-
+        // sets the visitor to checed out of the camping
         public bool CheckOut(string rfid)
         {
             String sql = "UPDATE `dbi339805`.`visitor` SET `Entered` = 'false' WHERE `RFID` = '" + rfid + "';";

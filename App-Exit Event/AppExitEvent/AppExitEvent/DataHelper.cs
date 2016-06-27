@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 
 namespace AppExitEvent
 {
-    class DataHelper
+    public class DataHelper
     {
         public MySqlConnection connection;
         private int visitorid;
@@ -25,8 +25,7 @@ namespace AppExitEvent
             rentids = new List<int>();
         }
 
-
-        //Method that searches if there is such a user in the database Returns true or false
+        //searches if there is a user with the specified rfid in the database 
         public bool CheckUser(string rfid)
         {
             String sql = "SELECT * FROM visitor";
@@ -65,6 +64,8 @@ namespace AppExitEvent
             return false;
         }
 
+        //checks if a visitor has equipment to return, if yes-returns false and doesn't check him out
+        //if yes - returns true and checks the user out 
         private bool AllowUser(int idIn, string rfid)
         {
             String sql = "SELECT DISTINCT v.VisitorID FROM `rent_equipment` e join `visitor` v on(e.VISITOR_VisitorID=v.VisitorID) WHERE EXISTS (SELECT * FROM `rent_equipment` t Where t.VISITOR_VisitorID=e.VISITOR_VisitorID AND t.EndDate is null) AND e.VISITOR_VisitorID=" +idIn;
@@ -99,7 +100,7 @@ namespace AppExitEvent
             }
             return false;
         }
-
+        //sets the rfid to null and makes the user unactive
         private void UnassignMethod(int idin,string rfid)
         {
             string query = "UPDATE `dbi339805`.`visitor` SET `RFID` = '" + null + "', `Active` = 0 WHERE `VisitorID` = '" + idin + "';";
@@ -122,6 +123,8 @@ namespace AppExitEvent
                 connection.Close();
             }
         }
+
+        //returns the names of all rented by the user equipment;
         public List<string> GetAllRented()
         {
             List<string> rented = new List<string>();
@@ -161,6 +164,8 @@ namespace AppExitEvent
 
 
         }
+
+        //returns the RentID's of all rented equipment
         private List<string> PrivateGetListEquipment(List<int> ids)
         {
             List<string> rented = new List<string>();
@@ -181,6 +186,8 @@ namespace AppExitEvent
             return rented;
 
         }
+
+        //sets the EndDate and returns all rented by the user equipment
         public bool ReturnAll()
         {
 

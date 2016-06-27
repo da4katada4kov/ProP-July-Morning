@@ -19,12 +19,14 @@ namespace App_Camping_Entrance
 
         private void buttonCheckIn_Click(object sender, EventArgs e)
         {
+            //opens form for check in
             CheckInCamping checkin = new CheckInCamping();
             checkin.Show();
         }
 
         private void buttonCheckOut_Click(object sender, EventArgs e)
         {
+            //opens form for checkout
             CheckOutCamping checkout = new CheckOutCamping();
             checkout.Show();
         }

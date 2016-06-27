@@ -22,7 +22,7 @@ namespace Cashapp
                 else
                     quantity = 0;
             } 
-        }
+        } //quantity rented
 
         public Equipment(int id, double price, string desc)
         {

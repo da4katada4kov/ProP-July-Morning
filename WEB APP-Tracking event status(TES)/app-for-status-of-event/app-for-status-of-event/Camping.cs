@@ -11,7 +11,7 @@ namespace app_for_status_of_event
     public class Camping
     {
         DataHelper dh = new DataHelper();
-
+        // selects nr of rented spots from db and calculates how many are free
         public int GetNrOfFreeSpots()
         {
             String sql = "SELECT COUNT(*) FROM booking";
@@ -33,7 +33,7 @@ namespace app_for_status_of_event
             }
             return 15 - occupied;
         }
-
+        // selects all people who have entered the camping
         public int GetNrOfPeopleAtCamping()
         {
             String sql = "SELECT COUNT(*) FROM visitor WHERE Entered = 'true'";
@@ -55,6 +55,7 @@ namespace app_for_status_of_event
             }
             return nr;
         }
+        //selects nr of active spots
         public int GetNrOfActiveSpots()
         {
             String sql = "SELECT COUNT(*) FROM booking WHERE Entered ='true'";
@@ -75,6 +76,7 @@ namespace app_for_status_of_event
             }
             return nr;
         }
+        //selects number of spots which are booked but no one has yet entered
 
         public int GetNrOfNonActiveSpots()
         {

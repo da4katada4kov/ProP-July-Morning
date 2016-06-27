@@ -18,6 +18,7 @@ namespace PayPal_log_file_converter
             this.Amount = amount;
             this.VisitorID = visitorid;
         }
+        //Override the string method for the class
         public override string ToString()
         {
             return IdNr + " " + Amount;

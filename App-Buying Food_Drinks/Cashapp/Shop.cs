@@ -12,11 +12,11 @@ namespace Cashapp
     {
         
         DataHelper dh = new DataHelper();
-        public int ShopId { get; set; }
-        public string Name { get; set; }
-        private List<Product> products { get; set; }
+        public int ShopId { get; set; }   // some properties to keep the values
+        public string Name { get; set; }  // some properties to keep the values
+        private List<Product> products { get; set; } // private list of products
 
-        public Shop(int id)
+        public Shop(int id)//Constructor
         {
             this.ShopId = id;
             products = new List<Product>();
@@ -76,7 +76,7 @@ namespace Cashapp
                 return 0;
 
         }
-        public Product GetProduct(string desc)
+        public Product GetProduct(string desc) //Returns the product
         {
             List<Product> temp = GetAllProducts();
             Product p = null;
@@ -84,7 +84,7 @@ namespace Cashapp
             {
                 if (i.Description == desc)
                 {
-                    if (i.QuantityAvailable==0 || i.QuantityBought>i.QuantityAvailable)
+                    if (i.QuantityAvailable==0 || i.QuantityBought>=i.QuantityAvailable)
                         throw new ProductOutOfStockException();
                     else
                         p = i;
@@ -94,7 +94,7 @@ namespace Cashapp
             if (p != null)
                 return p;
             else
-                return null;
+                return null; //if no product is found returns null
         }
     }
 }

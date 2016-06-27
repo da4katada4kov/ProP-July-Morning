@@ -11,22 +11,26 @@ namespace ChipSetApp
 {
     public class Visitor
     {
-        public string TagSerial { get; set; }
+        public string TagSerial { get; set; } //to get the RFID's Code
         public RFID myRFIDReader;
         public Visitor()
         {
             try
             {
                 myRFIDReader = new RFID();
-                myRFIDReader.Tag += new TagEventHandler(SayHello);
+                myRFIDReader.Tag += new TagEventHandler(SayHello);//assigns the event with the method
                 
             }
-            catch (PhidgetException)
+            catch (PhidgetException)//If there is an error with the rfid it displays the message
             {
                 MessageBox.Show("error at start-up.");
             }
+            catch//General error catch
+            {
+                MessageBox.Show("Unexpected ERROR occured");
+            }
         }
-        public void Open()
+        public void Open() //Method to initialize the RFID
         {
             try
             {
@@ -41,14 +45,14 @@ namespace ChipSetApp
             }
             
         }
-        public void Close()
+        public void Close()//Method to stop the RFID
         {
             myRFIDReader.LED = false;
             myRFIDReader.Antenna = false;
             myRFIDReader.close();
          
         }
-        public void SayHello(object sender, TagEventArgs e)
+        public void SayHello(object sender, TagEventArgs e)//Assigns the variable with the tag
         {
             TagSerial = e.Tag;
         }

@@ -25,25 +25,25 @@ namespace Cashapp
             InitializeComponent();
             shop1 = new Shop(1);
             v = new Visitor();
-            List<Product> prods = shop1.GetAllProducts();
+            List<Product> prods = shop1.GetAllProducts(); //Local list which gets all the products
             order = new Order();
             dh = new DataHelper();
-            toolTipOJ.SetToolTip(btnOJ, "Orange Juice");
-            toolTipLJ.SetToolTip(buttonLJ, "Lemon Juice");
-            toolTipCJ.SetToolTip(buttonCJ, "Cherry Juice");
-            toolTipLimeJ.SetToolTip(buttonLimeJ, "Lime Juice");
-            toolTipBurger.SetToolTip(btnBurger, "Chicken Burger");
-            toolTipDonerKebab.SetToolTip(btnDoner, "Doner Kebab");
-            toolTipFinlandia.SetToolTip(btnFinlandia, "Vodka Finlandia");
-            toolTipFries.SetToolTip(btnFries, "French Fries");
-            toolTipHotDog.SetToolTip(btnHotdog, "Hot Dog");
-            toolTipNuts.SetToolTip(btnNuts, "Nuts");
-            toolTipRum.SetToolTip(btnHavana, "Rum");
-            toolTipSmirnoff.SetToolTip(btnSmirnoff, "Vodka Smirnoff");
-            toolTipTequila.SetToolTip(btnJC, "Tequila");
-            toolTipPizza.SetToolTip(btnPizza, "Pizza Slice");
-            toolTipWhiskey.SetToolTip(btnJD, "Whiskey");
-            
+            toolTipOJ.SetToolTip(btnOJ, "Orange Juice");                       //Tooltips for better experience
+            toolTipLJ.SetToolTip(buttonLJ, "Lemon Juice");                     //Tooltips for better experience  
+            toolTipCJ.SetToolTip(buttonCJ, "Cherry Juice");                    //Tooltips for better experience
+            toolTipLimeJ.SetToolTip(buttonLimeJ, "Lime Juice");                //Tooltips for better experience    
+            toolTipBurger.SetToolTip(btnBurger, "Chicken Burger");             //Tooltips for better experience      
+            toolTipDonerKebab.SetToolTip(btnDoner, "Doner Kebab");             //Tooltips for better experience    
+            toolTipFinlandia.SetToolTip(btnFinlandia, "Vodka Finlandia");      //Tooltips for better experience        
+            toolTipFries.SetToolTip(btnFries, "French Fries");                 //Tooltips for better experience
+            toolTipHotDog.SetToolTip(btnHotdog, "Hot Dog");                    //Tooltips for better experience
+            toolTipNuts.SetToolTip(btnNuts, "Nuts");                           //Tooltips for better experience
+            toolTipRum.SetToolTip(btnHavana, "Rum");                           //Tooltips for better experience
+            toolTipSmirnoff.SetToolTip(btnSmirnoff, "Vodka Smirnoff");         //Tooltips for better experience  
+            toolTipTequila.SetToolTip(btnJC, "Tequila");                       //Tooltips for better experience
+            toolTipPizza.SetToolTip(btnPizza, "Pizza Slice");                  //Tooltips for better experience     
+            toolTipWhiskey.SetToolTip(btnJD, "Whiskey");                       //Tooltips for better experience 
+
         }
         private void NewOrder()
         {
@@ -54,7 +54,7 @@ namespace Cashapp
             lblTotal.Text = total.ToString() + "€";
         }
         //updates listbox, total cost of order 
-        private void Update() 
+        private void Update()
         {
             int index = orderlist.SelectedIndex;
 
@@ -63,12 +63,12 @@ namespace Cashapp
             try
             {
                 foreach (var i in order.productlist)
-                {                  
-                        orderlist.Items.Add(i.ToString() );
-                        total += i.PricePerOne * i.QuantityBought;
-                    
+                {
+                    orderlist.Items.Add(i.ToString());
+                    total += i.PricePerOne * i.QuantityBought;
+
                 }
-                if(order.productlist.Count >0 )
+                if (order.productlist.Count > 0)
                     orderlist.SelectedIndex = index;
                 //update label total
                 lblTotal.Text = total.ToString() + "€";
@@ -77,7 +77,7 @@ namespace Cashapp
             {
                 //MessageBox.Show("Please select an item from your order");
             }
-            
+
         }
         //adds one to quantity
         private void AddOne()
@@ -87,11 +87,11 @@ namespace Cashapp
                 int index = orderlist.SelectedIndex;
                 order.productlist[index].QuantityBought += 1;
             }
-            catch 
+            catch
             {
                 //MessageBox.Show("Please select an item from your order");
             }
-            
+
         }
         //removes one from quantity
         private void RemoveOne()
@@ -106,7 +106,7 @@ namespace Cashapp
                     order.productlist.RemoveAt(index);
                     orderlist.SelectedIndex = -1;
                 }
-                    
+
             }
             catch
             {
@@ -126,10 +126,12 @@ namespace Cashapp
                 Update();
             }
         }
-  
+
+
+        // Button click events that search for the item and add the quantity
         private void button3_Click(object sender, EventArgs e)
         {
-            try 
+            try
             {
                 p = shop1.GetProduct("Sprite");
                 AddNew();
@@ -138,7 +140,7 @@ namespace Cashapp
             {
                 MessageBox.Show(exc.Message);
             }
-            
+
         }
 
         private void btnCola_Click(object sender, EventArgs e)
@@ -207,7 +209,7 @@ namespace Cashapp
         }
 
         private void btnRedBull_Click(object sender, EventArgs e)
-        { 
+        {
             try
             {
                 p = shop1.GetProduct("RedBull");
@@ -220,7 +222,7 @@ namespace Cashapp
         }
 
         private void button6_Click(object sender, EventArgs e)
-        { 
+        {
             try
             {
                 p = shop1.GetProduct("Bavaria");
@@ -242,11 +244,11 @@ namespace Cashapp
             catch (ProductOutOfStockException exc)
             {
                 MessageBox.Show(exc.Message);
-            } 
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
-        {           
+        {
             try
             {
                 p = shop1.GetProduct("Heineken");
@@ -255,7 +257,7 @@ namespace Cashapp
             catch (ProductOutOfStockException exc)
             {
                 MessageBox.Show(exc.Message);
-            } 
+            }
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -285,7 +287,7 @@ namespace Cashapp
         }
 
         private void button11_Click(object sender, EventArgs e)
-        {           
+        {
             try
             {
                 p = shop1.GetProduct("OrangeJuice");
@@ -425,12 +427,53 @@ namespace Cashapp
             {
                 MessageBox.Show(exc.Message);
             }
-   
+
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                p = shop1.GetProduct("LemonJuice");
+                AddNew();
+            }
+            catch (ProductOutOfStockException exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                p = shop1.GetProduct("CherryJuice");
+                AddNew();
+            }
+            catch (ProductOutOfStockException exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                p = shop1.GetProduct("LimeJuice");
+                AddNew();
+            }
+            catch (ProductOutOfStockException exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+        }
+
+        //Checkout Button
         private void btnCheckout_Click(object sender, EventArgs e)
         {
-            if (btnCheckout.Text == "Checkout")
+            if (btnCheckout.Text == "Checkout")//Checks if this current person
+            //has finished with ordering and its time for new user's order
             {
                 if (total == 0)
                 {
@@ -456,57 +499,17 @@ namespace Cashapp
                         order.Total = total;
                         v.order = order;
                         btnCheckout.Text = "New Order";
-                    }   
+                    }
 
                 }
             }
-            else if (btnCheckout.Text == "New Order")
+            else if (btnCheckout.Text == "New Order")//else Changes the text and its time for a new order
             {
                 NewOrder();
                 btnCheckout.Text = "Checkout";
             }
-           
-            
-        }
-        
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                p = shop1.GetProduct("Lemon Juice");
-                AddNew();
-            }
-            catch (ProductOutOfStockException exc)
-            {
-                MessageBox.Show(exc.Message);
-            }
-        }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                p = shop1.GetProduct("Cherry Juice");
-                AddNew();
-            }
-            catch (ProductOutOfStockException exc)
-            {
-                MessageBox.Show(exc.Message);
-            }
-        }
-
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                p = shop1.GetProduct("Lime Juice");
-                AddNew();
-            }
-            catch (ProductOutOfStockException exc)
-            {
-                MessageBox.Show(exc.Message);
-            }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

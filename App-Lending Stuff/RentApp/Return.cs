@@ -17,34 +17,48 @@ namespace Cashapp
         public Return()
         {
             InitializeComponent();
-            toolTip2.SetToolTip(this.buttonReturnAll, "Return all rented items");
-            toolTipselectone.SetToolTip(this.buttonReturnOne, "Press to return the item you have selected from the list");
-            toolTipGetList.SetToolTip(this.buttonIdentifyVisitor, "Press to see all the items you have rented");
+            toolTip2.SetToolTip(this.buttonReturnAll, "Return all rented items"); //tooltip
+            toolTipselectone.SetToolTip(this.buttonReturnOne, "Press to return the item you have selected from the list");//tooltip
             v.Open();
             listBox1.Items.Add("Please, identify yourself!");
+            v.myRFIDReader.Tag += DisplayRented; //attach event handler
         }
 
         private void toolTip2_Popup(object sender, PopupEventArgs e)
         {
             
         }
-
-        private void buttonIdentifyVisitor_Click(object sender, EventArgs e)
+        //event handler to display all rented by the visitor items
+        private void DisplayRented(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
             rented = v.GetAllRented();
-
-            foreach (Equipment i in rented)
+            if (rented != null)
             {
-                listBox1.Items.Add(i.ItemName);
+                foreach (Equipment i in rented)
+                {
+                    listBox1.Items.Add(i.ItemName);
+                }
+            }
+            else
+            {
+                listBox1.Items.Add("You have no rented items.");
             }
         }
 
         private void Return_FormClosing(object sender, FormClosingEventArgs e)
         {
-            v.Close();
-        }
+            try
+            {
+                v.Close();
 
+            }
+            catch
+            {
+
+            }
+        }
+        //calls method to return all rented items if the visitors specifies he wants to
         private void buttonReturnAll_Click(object sender, EventArgs e)
         {
             bool x = v.ReturnAll(rented);
@@ -59,7 +73,7 @@ namespace Cashapp
                 listBox1.Items.Add("A problem occured!");
             }
         }
-
+        //returns only the selected in the listbox item
         private void buttonReturnOne_Click(object sender, EventArgs e)
         {
 

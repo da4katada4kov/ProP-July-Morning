@@ -11,6 +11,7 @@ namespace Cashapp
 {
     public class Visitor
     {
+        //class for renting
         DataHelper dh = new DataHelper();
         private RFID myRFIDReader;
         public Order order;
@@ -49,9 +50,8 @@ namespace Cashapp
 
         public void SayHello(object sender, TagEventArgs e)
         {
-            dh.Rent(e.Tag, order.productlist, order.Total);
-            DialogResult dialogResult =MessageBox.Show("Hello visitor with rfid-nr " + e.Tag +
-                ".\nThank you for your order ! ! !");
+            if(dh.Rent(e.Tag, order.productlist, order.Total))
+                MessageBox.Show("Thank you for your order ! ! !");
 
         }
     }

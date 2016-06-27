@@ -62,8 +62,16 @@ namespace App_Camping_Entrance
             listBox1.Clear();
             try
             {
-                v.SpotEnter(spotid,guestof);
-                listBox1.Text="You checked into the camping successfully!\nHave fun!";
+                //if rfid is scanned, checks the visitor in
+                if (v.TagSerial != null)
+                {
+                    v.SpotEnter(spotid, guestof);
+                    listBox1.Text = "You checked into the camping successfully!\nHave fun!";
+                }
+                else
+                {
+                    listBox1.Text = "You have not scanned your RFID!";
+                }
             }
             catch (Exception exc)
             {

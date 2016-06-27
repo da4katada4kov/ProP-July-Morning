@@ -37,7 +37,7 @@
             // 
             this.buttonCheckIn.BackColor = System.Drawing.Color.GreenYellow;
             this.buttonCheckIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCheckIn.Location = new System.Drawing.Point(12, 12);
+            this.buttonCheckIn.Location = new System.Drawing.Point(9, 80);
             this.buttonCheckIn.Name = "buttonCheckIn";
             this.buttonCheckIn.Size = new System.Drawing.Size(161, 89);
             this.buttonCheckIn.TabIndex = 0;
@@ -63,6 +63,7 @@
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.buttonCheckIn);
             this.Name = "CheckInCamping";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Check In";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CheckInCamping_FormClosing);
             this.ResumeLayout(false);

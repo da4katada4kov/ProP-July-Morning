@@ -25,6 +25,7 @@ namespace app_for_status_of_event
             listBox1.Items.Add("There are " + freespots + "/15 free spots at the camping.");
         }
 
+        //calls methods and displays infor about the camping
         private void buttonNrOfPeopleAtCamping_Click(object sender, EventArgs e)
         {
             try

@@ -67,6 +67,7 @@
             this.Controls.Add(this.buttonCheckOut);
             this.Controls.Add(this.buttonCheckIn);
             this.Name = "Welcome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome to the camping";
             this.ResumeLayout(false);
 

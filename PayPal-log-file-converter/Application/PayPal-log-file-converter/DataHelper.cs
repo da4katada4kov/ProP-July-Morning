@@ -12,7 +12,7 @@ namespace PayPal_log_file_converter
     {
         public MySqlConnection connection;
 
-        public DataHelper()
+        public DataHelper()//Establishes the connection
         {
             String connectionInfo = "server=athena01.fhict.local;" +
                                     "database=dbi339805;" +
@@ -30,6 +30,8 @@ namespace PayPal_log_file_converter
             MySqlCommand command = new MySqlCommand(sql, connection);
             try
             {
+
+                
                 command.Parameters.AddWithValue("@transactionid", transactionid);
                 command.Parameters.AddWithValue("@visitorid", visitorid);
                 command.Parameters.AddWithValue("@amount", amount);
@@ -39,7 +41,7 @@ namespace PayPal_log_file_converter
                 command.ExecuteNonQuery();
                 return true;
             }
-            catch (MySqlException exc)
+            catch (MySqlException )
             {
                 return false;
             }

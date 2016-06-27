@@ -20,7 +20,7 @@ namespace Cashapp
             this.ShopId = id;
             products = new List<Equipment>();
         }
-
+        //returns all equipment available
         public List<Equipment> GetAllProducts()
         {
             String sql = "SELECT * FROM equipment;";
@@ -51,6 +51,7 @@ namespace Cashapp
             }
             return products;
         }
+        //searches for a product
         public Equipment GetProduct(string desc)
         {
             List<Equipment> temp = GetAllProducts();

@@ -10,21 +10,25 @@ namespace Cashapp
     {
         private int quantity;
         private int available;
-        public int ProductID { get; set; }
-        public double PricePerOne { get; set; }
-        public string Description { get; set; }
-        public int QuantityBought {
+        public int ProductID { get; set; }      //Some propertise to keep the values
+        public double PricePerOne { get; set; } //Some propertise to keep the values
+        public string Description { get; set; } //Some propertise to keep the values
+        public int QuantityBought {             
             get { return quantity; }
             set
             {
                 if (value > 0)
-                    quantity = value;
+                {
+                   
+                        quantity = value;
+
+                }
                 else
                 {
                     quantity = 0; 
                 }     
             } 
-        }
+        }           //Some propertise to keep the values
         public int QuantityAvailable 
         { 
             get { return available; }
@@ -37,15 +41,15 @@ namespace Cashapp
                     available = 0;
                 }
             }
-        }
+        }        //Some propertise to keep the values
 
-        public Product(int id, double price, string desc)
+        public Product(int id, double price, string desc)//Construtor
         {
             this.ProductID = id;
             this.PricePerOne = price;
             this.Description = desc;
         }
-        public override string ToString()
+        public override string ToString() //overrides the tostring method in the class
         {
             return Description + " - Quantity: " + QuantityBought;
         }

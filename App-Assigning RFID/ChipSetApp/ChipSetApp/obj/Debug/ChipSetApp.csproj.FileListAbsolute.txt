@@ -34,3 +34,29 @@ D:\Files\Fontys\Project P\ProP-Git\ProP-July-Morning\App-Assigning RFID\ChipSetA
 D:\Files\Fontys\Project P\ProP-Git\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.Properties.Resources.resources
 D:\Files\Fontys\Project P\ProP-Git\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.Welcome.resources
 D:\Files\Fontys\Project P\ProP-Git\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.csproj.GenerateResource.Cache
+D:\ICT\block4\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\bin\Debug\ChipSetApp.exe.config
+D:\ICT\block4\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.exe
+D:\ICT\block4\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.pdb
+D:\ICT\block4\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\bin\Debug\ChipSetApp.exe
+D:\ICT\block4\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\bin\Debug\ChipSetApp.pdb
+D:\ICT\block4\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+D:\ICT\block4\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\bin\Debug\Phidget21.NET.2.1.8.19.Fakes.xml
+D:\ICT\block4\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.csprojResolveAssemblyReference.cache
+D:\ICT\block4\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.BuyTicket.resources
+D:\ICT\block4\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.EnterEvent.resources
+D:\ICT\block4\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.Properties.Resources.resources
+D:\ICT\block4\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.Welcome.resources
+D:\ICT\block4\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.csproj.GenerateResource.Cache
+C:\Users\da4kata\Desktop\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\bin\Debug\ChipSetApp.exe.config
+C:\Users\da4kata\Desktop\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.exe
+C:\Users\da4kata\Desktop\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.pdb
+C:\Users\da4kata\Desktop\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\bin\Debug\ChipSetApp.exe
+C:\Users\da4kata\Desktop\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\bin\Debug\ChipSetApp.pdb
+C:\Users\da4kata\Desktop\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\da4kata\Desktop\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\bin\Debug\Phidget21.NET.2.1.8.19.Fakes.xml
+C:\Users\da4kata\Desktop\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.csprojResolveAssemblyReference.cache
+C:\Users\da4kata\Desktop\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.BuyTicket.resources
+C:\Users\da4kata\Desktop\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.EnterEvent.resources
+C:\Users\da4kata\Desktop\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.Properties.Resources.resources
+C:\Users\da4kata\Desktop\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.Welcome.resources
+C:\Users\da4kata\Desktop\ProP-July-Morning\App-Assigning RFID\ChipSetApp\ChipSetApp\obj\Debug\ChipSetApp.csproj.GenerateResource.Cache

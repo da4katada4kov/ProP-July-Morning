@@ -12,7 +12,7 @@ namespace Cashapp
 {
     public class Visitor
     {
-        DataHelper dh = new DataHelper();
+        DataHelper dh = new DataHelper();//dataelper object
 
         private RFID myRFIDReader;
         public Order order;

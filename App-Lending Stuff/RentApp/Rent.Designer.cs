@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Rent));
             this.orderlist = new System.Windows.Forms.ListBox();
             this.btnCheckout = new System.Windows.Forms.Button();
@@ -45,6 +46,15 @@
             this.btnCharger = new System.Windows.Forms.Button();
             this.btnPhoneCharger = new System.Windows.Forms.Button();
             this.btnUSB = new System.Windows.Forms.Button();
+            this.toolTipCamera = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipGoPro = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipCharger = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipHoverBoard = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipLaptop = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipLaptopCharger = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipTablet = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipSpeakers = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipUSB = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // orderlist
@@ -242,6 +252,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Rent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rent Equipment";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.ResumeLayout(false);
@@ -267,6 +278,15 @@
         private System.Windows.Forms.Button btnCharger;
         private System.Windows.Forms.Button btnPhoneCharger;
         private System.Windows.Forms.Button btnUSB;
+        private System.Windows.Forms.ToolTip toolTipCamera;
+        private System.Windows.Forms.ToolTip toolTipGoPro;
+        private System.Windows.Forms.ToolTip toolTipCharger;
+        private System.Windows.Forms.ToolTip toolTipHoverBoard;
+        private System.Windows.Forms.ToolTip toolTipLaptop;
+        private System.Windows.Forms.ToolTip toolTipLaptopCharger;
+        private System.Windows.Forms.ToolTip toolTipTablet;
+        private System.Windows.Forms.ToolTip toolTipSpeakers;
+        private System.Windows.Forms.ToolTip toolTipUSB;
     }
 }
 

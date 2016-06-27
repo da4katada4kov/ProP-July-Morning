@@ -75,7 +75,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(392, 219);
+            this.ClientSize = new System.Drawing.Size(392, 225);
             this.Controls.Add(this.buttonNrOfPeopleAtCamping);
             this.Controls.Add(this.buttonNrOfFreeSpots);
             this.Controls.Add(this.listBox1);

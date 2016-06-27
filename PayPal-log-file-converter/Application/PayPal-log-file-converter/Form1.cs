@@ -13,14 +13,15 @@ namespace PayPal_log_file_converter
 {
     public partial class Form1 : Form
     {
-        OpenFileDialog od = new OpenFileDialog();
-        LogFile lf;
-        DataHelper dh = new DataHelper();
+        OpenFileDialog od = new OpenFileDialog();//Creation of objects of the different classes
+        LogFile lf;                              //Creation of objects of the different classes
+        DataHelper dh = new DataHelper();        //Creation of objects of the different classes
         public Form1()
         {
             InitializeComponent();
         }
 
+        //Loads the information
         private void buttonLoad_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
@@ -87,7 +88,7 @@ namespace PayPal_log_file_converter
             }
           
         }
-
+        //Adds the log to the database
         private void buttonSaveToDB_Click(object sender, EventArgs e)
         {
             try

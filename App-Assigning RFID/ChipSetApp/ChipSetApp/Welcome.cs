@@ -17,13 +17,13 @@ namespace ChipSetApp
             InitializeComponent();
         }
 
-        private void buttonBuyTicket_Click_1(object sender, EventArgs e)
+        private void buttonBuyTicket_Click_1(object sender, EventArgs e)//Initialize the new form
         {
             BuyTicket buy = new BuyTicket();
             buy.Show();
         }
 
-        private void btnCheckIn_Click(object sender, EventArgs e)
+        private void btnCheckIn_Click(object sender, EventArgs e)//Initialize the new form
         {
             EnterEvent enter = new EnterEvent();
             enter.Show();

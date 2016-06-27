@@ -18,17 +18,17 @@ namespace ChipSetApp
     public partial class EnterEvent : Form
     {
 
-        Visitor v;
-        DataHelper verify;
-        public EnterEvent()
+        Visitor v;         //Declaration of the objects
+        DataHelper verify; //Declaration of the objects 
+        public EnterEvent()//Initializations of all components
         {
             InitializeComponent();
-            v = new Visitor();
-            verify = new DataHelper();
-            v.Open();
-            v.myRFIDReader.Tag += UpdateLabel;
+            v = new Visitor(); // Creates the new visitor object
+            verify = new DataHelper(); // Creates the new Data Helper object
+            v.Open(); 
+            v.myRFIDReader.Tag += UpdateLabel; //Assigns the event
         }
-        private void UpdateForm()
+        private void UpdateForm()//Method to prevent null values
         {
             tbEmail.Text = "";
             tbFirstName.Text = "";
@@ -59,7 +59,8 @@ namespace ChipSetApp
             }
             
         }
-
+       
+        // A couple of events to prevent monkey input
         private void tbFirstName_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsDigit(e.KeyChar) || Char.IsPunctuation(e.KeyChar) || Char.IsSymbol(e.KeyChar) || Char.IsWhiteSpace(e.KeyChar))
@@ -111,6 +112,8 @@ namespace ChipSetApp
 
             }
         }
+ 
+        //Event to change the lables text
         public void UpdateLabel(object sender, TagEventArgs e)
         {
             tbRFID.Text = v.TagSerial;

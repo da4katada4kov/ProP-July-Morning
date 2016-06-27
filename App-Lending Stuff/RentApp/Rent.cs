@@ -24,7 +24,16 @@ namespace Cashapp
             v = new Visitor();
             List<Equipment> prods = shop1.GetAllProducts();
             order = new Order();
-            
+            toolTipCamera.SetToolTip(btnCamera, "Sony DSLR-A200");
+            toolTipCharger.SetToolTip(btnPhoneCharger, "Universal phone charger");
+            toolTipGoPro.SetToolTip(btnGoPro, "GoPro Session");
+            toolTipHoverBoard.SetToolTip(btnHoverBoard, "Hover Board");
+            toolTipLaptop.SetToolTip(btnLaptop, "Sony Vaio");
+            toolTipSpeakers.SetToolTip(btnSpeaker, "Logitech Speakers");
+            toolTipTablet.SetToolTip(btnTablet, "Tablet");
+            toolTipUSB.SetToolTip(btnUSB, "USB Cable");
+            toolTipLaptopCharger.SetToolTip(btnCharger, "Universal Laptop Charger");
+
         }
         private void NewOrder()
         {
@@ -43,13 +52,13 @@ namespace Cashapp
             total = 0;
             try
             {
-                foreach (var i in order.productlist)
+                foreach (var i in order.todisplay)
                 {                  
                         orderlist.Items.Add(i.ToString() );
                         total += i.PricePerOne * i.Quantity;
                     
                 }
-                if(order.productlist.Count >0 )
+                if(order.todisplay.Count >0 )
                     orderlist.SelectedIndex = index;
                 //update label total
                 lblTotal.Text = total.ToString() + "€";
@@ -66,13 +75,13 @@ namespace Cashapp
             try
             {
                 int index = orderlist.SelectedIndex;
-                order.productlist[index].Quantity += 1;
+                order.todisplay[index].Quantity += 1;
             }
-            catch 
+            catch
             {
                 //MessageBox.Show("Please select an item from your order");
             }
-            
+
         }
         //removes one from quantity
         private void RemoveOne()
@@ -80,14 +89,14 @@ namespace Cashapp
             try
             {
                 int index = orderlist.SelectedIndex;
-                order.productlist[index].Quantity -= 1;
+                order.todisplay[index].Quantity -= 1;
 
-                if (order.productlist[index].Quantity == 0)
+                if (order.todisplay[index].Quantity == 0)
                 {
-                    order.productlist.RemoveAt(index);
+                    order.todisplay.RemoveAt(index);
                     orderlist.SelectedIndex = -1;
                 }
-                    
+
             }
             catch
             {
@@ -98,7 +107,7 @@ namespace Cashapp
         //new product in order (when button is clicked)
         private void AddNew()
         {
-            bool x = order.AddProduct(p);
+            bool x = order.AddToDisplay(p);
             if (x == true)
                 Update();
             else
@@ -109,22 +118,25 @@ namespace Cashapp
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            p = shop1.GetProduct("Laptop");     
+            p = shop1.GetProduct("Laptop");
 
+            order.AddProduct(p);
             AddNew();
         }
 
         private void btnCola_Click(object sender, EventArgs e)
         {
             p = shop1.GetProduct("Camera");
-
+            order.AddProduct(p);
             AddNew();
+
         }
 
         private void btnCalcPlus_Click(object sender, EventArgs e)
         {
             try
             {
+                order.AddProduct(p);
                 AddOne();
                 Update();
             }
@@ -138,61 +150,70 @@ namespace Cashapp
         {
             try
             {
+                int index = orderlist.SelectedIndex;
+                order.productlist.RemoveAt(index);
                 RemoveOne();
                 Update();
             }
-            catch (Exception exc)
+            catch (Exception)
             {
-                MessageBox.Show(exc.Message);
+                MessageBox.Show("Please select an item!");
             }
         }
 
         private void btnFanta_Click(object sender, EventArgs e)
         {
             p = shop1.GetProduct("GoPro");
-
+            order.AddProduct(p);
             AddNew();
+
         }
 
         private void btnSchweppes_Click(object sender, EventArgs e)
         {
-            Equipment p = shop1.GetProduct("Tablet");
-
+            p = shop1.GetProduct("Tablet");
+            order.AddProduct(p);
             AddNew();
+
         }
 
         private void btnRedBull_Click(object sender, EventArgs e)
         {
             p = shop1.GetProduct("PortableSpeaker");
-
+            order.AddProduct(p);
             AddNew();
+
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             p = shop1.GetProduct("Hoverboard");
-
+            order.AddProduct(p);
             AddNew();
+
         }
         private void btnPhoneCharger_Click(object sender, EventArgs e)
         {
             p = shop1.GetProduct("Phone Charger");
-
+            order.AddProduct(p);
             AddNew();
+
         }
 
         private void btnCharger_Click(object sender, EventArgs e)
         {
             p = shop1.GetProduct("Laptop Charger");
-
+            order.AddProduct(p);
             AddNew();
+
         }
 
         private void btnUSB_Click(object sender, EventArgs e)
         {
             p = shop1.GetProduct("USB Cable");
-
+            order.AddProduct(p);
             AddNew();
+
         }
 
         private void btnCheckout_Click(object sender, EventArgs e)
@@ -206,7 +227,7 @@ namespace Cashapp
                 else
                 {
                     string info = "";
-                    foreach (Equipment i in order.productlist)
+                    foreach (Equipment i in order.todisplay)
                     {
                         info += i.ToString() + " x " + i.PricePerOne + "€\n";
                     }
@@ -238,7 +259,14 @@ namespace Cashapp
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            v.Close();
+            try
+            {
+                v.Close();
+            }
+            catch
+            {
+
+            }
         }
 
         

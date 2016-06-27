@@ -12,11 +12,12 @@ namespace Cashapp
 {
     public class VisitorReturn
     {
+        //class for returning
         DataHelper dh = new DataHelper();
-        private RFID myRFIDReader;
+        public RFID myRFIDReader;
         private string rfidtag;
         private List<int> rentids = new List<int>();
-
+        
         public VisitorReturn()
         {
             try
@@ -49,11 +50,10 @@ namespace Cashapp
             myRFIDReader.Antenna = false;
             myRFIDReader.close();
         }
-
+        //event handler, saves the rfid number
         public void SayHello(object sender, TagEventArgs e)
         {
             rfidtag = e.Tag;
-            MessageBox.Show("Hello visitor with rfid-nr " + e.Tag +"");
 
         }
         public List<Equipment> GetAllRented()
@@ -95,6 +95,7 @@ namespace Cashapp
             }
             return rented;
         }
+        
         private List<Equipment> PrivateGetListEquipment(List<int> ids)
         {
             List<Equipment> rented = new List<Equipment>();
@@ -121,7 +122,7 @@ namespace Cashapp
             return rented;
 
         }
-
+        //returns all rented equipment
         public bool ReturnAll(List<Equipment> tobereturned)
         {
             
@@ -169,6 +170,7 @@ namespace Cashapp
             }
             return x;
         }
+        //returns a specified equipment item
         public bool ReturnSelected(int atindex)
         {
             DateTime date = DateTime.Now;   

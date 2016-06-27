@@ -13,7 +13,7 @@ namespace Cashapp
     {
         public MySqlConnection connection;
 
-        public DataHelper()
+        public DataHelper()//Creates the connection
         {
             String connectionInfo = "server=athena01.fhict.local;" +
                                     "database=dbi339805;" +
@@ -23,8 +23,8 @@ namespace Cashapp
 
             connection = new MySqlConnection(connectionInfo);
         }
-    //returns the purchase id of the last purchase a specified visitor has made   
-        public int GetPurchaseID(int visitorid)
+       
+        public int GetPurchaseID(int visitorid)//returns the purchase id of the last purchase a specified visitor has made
         {
             String sql = "SELECT PurchaseID FROM purchase WHERE Timestamp = @timestamp";
             String sql1 = "SELECT MAX(`Timestamp`) FROM `purchase` WHERE `VISITOR_VisitorID`=@visitorid";
@@ -48,6 +48,7 @@ namespace Cashapp
             }
             
         }
+       
         //1. add a new purchase with a visitor id and a total
         //2. inserts all products and quantities into purchase_has_product
         //3. updates the quantity of the products in the product table

@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace AppExitEvent
 {
-    class RFIDClass
+    public class RFIDClass
     {
         public string TagSerial { get; set; }
         private RFID myRFIDReader;
@@ -49,6 +49,7 @@ namespace AppExitEvent
             myRFIDReader.close();
            
         }
+        //event handler
         public void SayHello(object sender, TagEventArgs e)
         {
             TagSerial = e.Tag;

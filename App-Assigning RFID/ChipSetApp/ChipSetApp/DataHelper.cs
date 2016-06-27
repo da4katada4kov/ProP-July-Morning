@@ -9,9 +9,9 @@ namespace ChipSetApp
 {
     public class DataHelper
     {
-        public MySqlConnection connection;
+        public MySqlConnection connection; //Declares a new connection
         private int id;
-        public int IdExported { get { return id; } }
+        public int IdExported { get { return id; } } //Variable that keeps the Id of the user
 
         public DataHelper()
         {
@@ -23,7 +23,7 @@ namespace ChipSetApp
                                     "connect timeout=30;";
 
             connection = new MySqlConnection(connectionInfo);
-        }
+        }//Tche class constructor
 
 
         //Method that searches if there is such a user in the database Returns true or false
@@ -37,7 +37,7 @@ namespace ChipSetApp
                 connection.Open();
                 MySqlDataReader reader = command.ExecuteReader();
 
-                while (reader.Read())
+                while (reader.Read())//Executes the reader until the correct user is found
                 {
                     if (idIn == Convert.ToInt32(reader[0]) && Fname == Convert.ToString(reader[1]) && Lname ==
                         Convert.ToString(reader[2]) && Email == Convert.ToString(reader[5]))
@@ -49,11 +49,11 @@ namespace ChipSetApp
                 }
                 return false;
             }
-            catch
+            catch //General catch 
             {
                 MessageBox.Show("Error while loading from the database..");
             }
-            finally
+            finally //Always close the connection to prevent ERRORS
             {
                 connection.Close();
             }
@@ -62,24 +62,25 @@ namespace ChipSetApp
 
 
 
-        //A method whitch Assignes the RFID to the user which has the input ID
+        //A private method whitch Assignes the RFID to the user which has the input ID
         private void AssignRFID(string rfid, int idin)
         {
+            //string with the SQL statement which does the work into the database
             string query = "UPDATE `dbi339805`.`visitor` SET `RFID` = '" + rfid + "', `Active` = 1 WHERE `VisitorID` = '" + idin + "';";
             MySqlCommand command = new MySqlCommand(query, connection);
-            MySqlDataReader reader;
+            
             try
             {
                 connection.Open();
-                reader = command.ExecuteReader();
+                command.ExecuteNonQuery();//Executes the statement
 
             }
-            catch (Exception exc)
+            catch (Exception exc)//Catching the exceptions returning a correct message
             {
                 MessageBox.Show(exc.Message);
             }
 
-            finally
+            finally //Always close the connection at the end
             {
                 connection.Close();
             }
@@ -97,33 +98,34 @@ namespace ChipSetApp
 		     connection.Open();
              MySqlDataReader search = allUsers.ExecuteReader();
                 
-                String name;
-                //int id;
+                String name;                
                 string email ;
                 string Lastname;
                 string rfid;
                 
                 while (search.Read())
                 {
-                    
+                    //the variables which get the values from the database
                     name=Convert.ToString(search[1]);
                     Lastname  = Convert.ToString(search[2]);
                     email =Convert.ToString(search[5]);
                     rfid = Convert.ToString(search[8]);
-                    if(DBNull.Value.Equals(search[8]))
-                    {
+                   
                         //Series of checks to find if the user exists
                         if (Fname==name && Lname==Lastname && email==Email && id==idin)
                         {
+                           //Closes the connections to Prevent conflicts
                            search.Close();
                            connection.Close();
-                           AssignRFID(RFID, idin);
+                             
+                           AssignRFID(RFID, idin);//Calls the private method and breaks the loop
                            break;
                          
                         }
-                    } 
+                    
                 }
 	        }
+                //Catching exceptions and closing the connection
 	
             catch(Exception exc)
             {

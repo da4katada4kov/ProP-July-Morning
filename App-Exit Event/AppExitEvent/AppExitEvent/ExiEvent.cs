@@ -20,15 +20,13 @@ namespace AppExitEvent
             InitializeComponent();
             r = new RFIDClass();
             r.Open();
-            Update();
         }
-
 
         private void buttonLeave_Click(object sender, EventArgs e)
         {
                   
         }
-
+        //input validation
         private void textBoxId_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsLetter(e.KeyChar) || Char.IsPunctuation(e.KeyChar) || Char.IsSymbol(e.KeyChar) || Char.IsWhiteSpace(e.KeyChar))
