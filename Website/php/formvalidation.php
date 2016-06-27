@@ -23,12 +23,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $result = mysql_query($sql);
         $row = mysql_fetch_array($result,MYSQLI_ASSOC);
         $count = mysql_num_rows($result);
-        //if ($count > 0) {
-			//echo "<script type='text/javascript'>alert('This email is in use')</script>";
-		//}
-          //      else{
+        if ($count > 0) {
+			echo "<script type='text/javascript'>alert('This email is in use')</script>";
+		}
+                else{
                     NewVisitor();
-          //      }
+                }
 	}
 }
 //functions
@@ -49,12 +49,17 @@ function sanatize($data) {
 function NewVisitor()
 {
     
-    $firstname =$_POST["firstname"];
-    $lastname =$_POST["lastname"];
-    $email = $_POST["email"];
+    $firstname =  mysql_real_escape_string($_POST["firstname"]);
+    $lastname =mysql_real_escape_string($_POST["lastname"]);
+    $email = mysql_real_escape_string($_POST["email"]);
     $gender = $_POST["gender"];
-    $dob = $_POST["dob"];
-    $email = $_POST['email'];
+    //$from = mysql_real_escape_string($_POST["dob"]);
+    //$date = DateTime::createFromFormat('m/d/Y',$from);
+    //$dob = $date->format("Y-m-d");
+    $from = $_POST["dob"];
+    $phpdate=$from;
+    $dob = date("Y-m-d",strtotime($phpdate));
+    $email = mysql_real_escape_string($_POST['email']);
     $active = 0;
     
     $query = "INSERT INTO visitor (FirstName,LastName,Dob,Gender,Email,Active) VALUES ('$firstname','$lastname','$dob','$gender','$email','$active')";
@@ -63,8 +68,8 @@ function NewVisitor()
     
     if($data)
     {
-        //echo "Success";
-       //echo "<script type='text/javascript'>alert('success')</script>";
+      echo "<script> $('#register').hide();"
+        . "$('#success').show(); $('#boughtticket1').hide();</script>";
        // email();
         //header("Location: index.php");                 
     }

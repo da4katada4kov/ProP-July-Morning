@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
         <link rel="icon" type="image/logotitle.png" href="images/logotitle.png" sizes="32x32">
         <meta name="keywords" content="July,Morning" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <link rel="stylesheet" type="text/css" href="css/demoG.css" />
 
 

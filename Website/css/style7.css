@@ -65,6 +65,7 @@ body{
     display: inline-block;
     line-height: 200%;
     font-size: 16px;
+    
 }
 .login input[type=text], input[type=submit]{
     float:right;
@@ -136,5 +137,16 @@ body{
 	-webkit-transform: scale(1); 
 	transform: scale(1); 
 }
-
+.login{
+    float: right;
+    color: #fff;
+    display: inline-block;
+    line-height: 200%;
+    font-size: 16px;
+    margin-top: 350px;
+    
+}
+.login input[type=text], input[type=submit]{
+    float:right;
+}
 }

@@ -18,11 +18,11 @@ body{
     -o-background-size: auto, cover;
     background-size: auto, cover;
     font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
-	background: #fff url(../images/bg.jpg) repeat top left;
-	font-weight: 400;
-	font-size: 15px;
+	  background: #fff url(../images/bg.jpg) repeat top left;
+	  font-weight: 400;
+	  font-size: 15px;
     text-align: center;
-	color: #fff;
+	  color: #fff;
 }
 .label{
   width:100px;
@@ -74,4 +74,23 @@ label{
   background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
+}
+#info{
+  float: right;
+  padding-right: 50px;
+  padding-top: 50px;
+}
+#img{ 
+  width:380px;
+  height: 380px;
+}
+div.kobobqdeli img{
+    margin: 20px 22%;
+    border: 3px solid #000;
+    padding: 1px;
+}
+@media screen and (max-width: 600px)
+{
+    div.kobobqdeli img{
+        display: none;
 }

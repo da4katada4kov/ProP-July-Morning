@@ -23,7 +23,7 @@ if(empty($_POST['email']))
         return false;
     }
     
-    $sql = "SELECT VisitorID, Email, FirstName FROM visitor WHERE VisitorID = '$id' and Email = '$email'";
+    $sql = "SELECT VisitorID, Email, FirstName, LastName FROM visitor WHERE VisitorID = '$id' and Email = '$email'";
     $result = mysql_query($sql);
     $row = mysql_fetch_array($result,MYSQLI_ASSOC);
     $count = mysql_num_rows($result);
@@ -38,6 +38,7 @@ if(empty($_POST['email']))
                 $_SESSION["Log"] = TRUE;
                 $_SESSION["email"] = $row["Email"];
                 $_SESSION["id"] = $row["VisitorID"];
+                $_SESSION["VisitorLname"] = $row["LastName"];
                 echo "<script> 
                 
                 $('#nameLogged').show();

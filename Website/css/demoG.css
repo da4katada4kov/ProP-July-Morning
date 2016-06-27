@@ -179,6 +179,15 @@ p.codrops-demos a.current-demo:hover{
 	background: rgba(255,255,255,0.9);
 	box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
 }
+#ifr{
+    width: 600px;
+	height: 400px;
+	position: relative;
+	margin: 0 auto;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    border: 10px solid rgba(255,255,255,0.3);
+    overflow: hidden;
+    }
 @media only screen and (min-width:150px) and (max-width:900px)
 {
     p.codrops-demos a,
@@ -198,3 +207,8 @@ p.codrops-demos a.current-demo:hover{
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 	background: rgba(104,171,194,0.0);
 }
+    #chao
+    {
+        display: none;
+    }
+   
