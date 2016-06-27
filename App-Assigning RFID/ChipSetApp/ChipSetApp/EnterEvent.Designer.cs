@@ -45,28 +45,28 @@
             // tbFirstName
             // 
             this.tbFirstName.BackColor = System.Drawing.SystemColors.Window;
-            this.tbFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFirstName.Location = new System.Drawing.Point(165, 31);
+            this.tbFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFirstName.Location = new System.Drawing.Point(145, 30);
             this.tbFirstName.Name = "tbFirstName";
-            this.tbFirstName.Size = new System.Drawing.Size(158, 26);
+            this.tbFirstName.Size = new System.Drawing.Size(178, 30);
             this.tbFirstName.TabIndex = 0;
             this.tbFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFirstName_KeyPress);
             // 
             // tbLastName
             // 
-            this.tbLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLastName.Location = new System.Drawing.Point(165, 79);
+            this.tbLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLastName.Location = new System.Drawing.Point(145, 78);
             this.tbLastName.Name = "tbLastName";
-            this.tbLastName.Size = new System.Drawing.Size(158, 26);
+            this.tbLastName.Size = new System.Drawing.Size(178, 30);
             this.tbLastName.TabIndex = 1;
             this.tbLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbLastName_KeyPress);
             // 
             // tbEmail
             // 
-            this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEmail.Location = new System.Drawing.Point(165, 131);
+            this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbEmail.Location = new System.Drawing.Point(145, 128);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(158, 26);
+            this.tbEmail.Size = new System.Drawing.Size(178, 30);
             this.tbEmail.TabIndex = 2;
             this.tbEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbEmail_KeyPress);
             // 
@@ -100,7 +100,7 @@
             this.labelMail.BackColor = System.Drawing.Color.Transparent;
             this.labelMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.labelMail.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelMail.Location = new System.Drawing.Point(66, 132);
+            this.labelMail.Location = new System.Drawing.Point(66, 130);
             this.labelMail.Name = "labelMail";
             this.labelMail.Size = new System.Drawing.Size(73, 25);
             this.labelMail.TabIndex = 7;
@@ -108,12 +108,12 @@
             // 
             // btnCheck
             // 
-            this.btnCheck.BackColor = System.Drawing.SystemColors.GrayText;
-            this.btnCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheck.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCheck.Location = new System.Drawing.Point(183, 226);
+            this.btnCheck.BackColor = System.Drawing.Color.Gold;
+            this.btnCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheck.ForeColor = System.Drawing.Color.Black;
+            this.btnCheck.Location = new System.Drawing.Point(165, 219);
             this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(124, 57);
+            this.btnCheck.Size = new System.Drawing.Size(158, 81);
             this.btnCheck.TabIndex = 9;
             this.btnCheck.Text = "Verify";
             this.btnCheck.UseVisualStyleBackColor = false;
@@ -137,7 +137,7 @@
             this.lbId.BackColor = System.Drawing.Color.Transparent;
             this.lbId.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.lbId.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbId.Location = new System.Drawing.Point(102, 180);
+            this.lbId.Location = new System.Drawing.Point(101, 178);
             this.lbId.Name = "lbId";
             this.lbId.Size = new System.Drawing.Size(37, 25);
             this.lbId.TabIndex = 13;
@@ -145,10 +145,10 @@
             // 
             // tbId
             // 
-            this.tbId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbId.Location = new System.Drawing.Point(165, 179);
+            this.tbId.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbId.Location = new System.Drawing.Point(144, 177);
             this.tbId.Name = "tbId";
-            this.tbId.Size = new System.Drawing.Size(158, 26);
+            this.tbId.Size = new System.Drawing.Size(179, 30);
             this.tbId.TabIndex = 12;
             this.tbId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbId_KeyPress);
             // 
@@ -170,7 +170,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(353, 361);
+            this.ClientSize = new System.Drawing.Size(336, 356);
             this.Controls.Add(this.tbRFID);
             this.Controls.Add(this.lbId);
             this.Controls.Add(this.tbId);
